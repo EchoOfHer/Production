@@ -3,14 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/components/navbar/navbar.js" defer></script>
     <title>prototype</title>
+    <script src="/components/navbar/navbar.js" defer></script>
+    
+    <style>
+        /* ดึง CSS พื้นฐานที่คุณมีมาใช้ */
+        body {
+            margin: 0;
+            background-color: #2B2B2B; /* */
+            font-family: 'SourceSans3', sans-serif;
+            color: white;
+        }
+
+        .main-element {
+            margin-left: 100px; /* */
+            margin-right: 100px; /* */
+        }
+
+        /* ส่วนหัว Logo และกล่องส้ม */
+        #logo-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            padding-top: 80px; 
+        }
+
+        #logo {
+            height: 150px;
+            width: auto;
+            z-index: 10;
+            position: relative;
+            margin-right: 100px;
+        }
+
+        #box {
+            width: 286px;
+            height: 350px;
+            background-color: #DF5F30; /* สีส้มตามดีไซน์ */
+            position: absolute; 
+            top: -100px;
+            left: 200px;
+            border-bottom-right-radius: 80px; /* ขอบโค้งตามรูป */
+            z-index: 1;
+        }
+
+        /* ส่วนเนื้อหา Prototype */
+        .hero-section {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 64px;
+            margin: 0;
+        }
+
+        h1 span {
+            color: #DF5F30; /* เน้นคำว่า Works? */
+        }
+
+        .description {
+            max-width: 500px;
+            font-size: 18px;
+            color: #AAAAAA;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        /* การจัดวางภาพคนงานที่มีขอบโค้ง */
+        .image-header-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -150px;
+        }
+
+        .image-header {
+            width: 500px;
+            height: auto;
+            border-radius: 80px 0 80px 0; /* โค้งสลับมุมตามรูป */
+            opacity: 0.8;
+        }
+
+        /* ขั้นตอน 01 และ 02 */
+        .step-container {
+            margin-top: 100px;
+        }
+
+        .step-row {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-number {
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .step-title {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        .step-image {
+            width: 450px;
+            border-radius: 15px;
+            border: 1px solid #444;
+        }
+
+        /* ส่วน Monitor System (Dashboard) */
+        .monitor-section {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            margin-top: 120px;
+            padding-bottom: 100px;
+        }
+
+        .dashboard-preview {
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .orange-text {
+            color: #DF5F30;
+        }
+    </style>
 </head>
 <body>
-    <!-- Loding navbar -->
     <main-navbar></main-navbar> 
-    <!-- Your work space is down here -->
 
-    
+    <div class="main-element">
+        
+        <div id="logo-box">
+            <div id="box"></div>
+            <img src="logo.png" id="logo" alt="Logo">
+        </div>
+
+        <section class="hero-section">
+            <h1>How Right Site<br><span>Works?</span></h1>
+            <p class="description">
+                AI-powered CCTV cameras monitor the site to detect missing safety equipment 
+                and unsafe proximity to dangerous machinery, ensuring worker safety.
+            </p>
+            <div class="image-header-container">
+                <img src="image.png" class="image-header" alt="Construction Worker"> </div>
+        </section>
+
+        <hr style="border: 0.5px solid #444; margin: 100px 0;">
+
+        <section class="step-container">
+            <div class="step-row">
+                <img src="image copy.png" class="step-image" alt="CCTV Grid"> <div class="step-content">
+                    <div class="step-number">01</div>
+                    <div class="step-title">Capture & Track</div>
+                    <p>Connect Camera and track worker in workshop.</p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <div class="step-content">
+                    <div class="step-number">02</div>
+                    <div class="step-title">Worker Alert<br>Monitor Notification</div>
+                    <p>AI CCTV helps detect workers without proper PPE and detects unsafe proximity to machines.</p>
+                </div>
+                <img src="image copy 2.png" class="step-image" alt="AI Detection"> </div>
+        </section>
+
+        <section class="monitor-section">
+            <img src="image copy 3.png" class="dashboard-preview" alt="AI Dashboard"> <div class="step-content">
+                <h2 class="orange-text" style="font-size: 40px;">Monitor System</h2>
+                <p>
+                    The monitoring system displays a visual from CCTV that identifies status: 
+                    missing safety equipment or workers approaching active hazardous machinery. 
+                    It also displays overall surroundings and environmental conditions.
+                </p>
+            </div>
+        </section>
+
+    </div>
 </body>
 </html>
