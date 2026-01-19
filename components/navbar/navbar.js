@@ -12,6 +12,10 @@ class MyNavbar extends HTMLElement {
             font-weight: normal;
             font-style: normal;
         }
+        body {
+            margin: 0;
+            background-color: #2B2B2B;
+        }
         nav {
             background: #2B2B2B;
             padding: 25px 100px;
