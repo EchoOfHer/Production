@@ -40,6 +40,7 @@ class MyNavbar extends HTMLElement {
 
         nav a:hover {
             font-weight: bold;
+            color:#FF9248;
         }
         nav icon{
             margin-right: auto; 
@@ -50,6 +51,7 @@ class MyNavbar extends HTMLElement {
         img{
             height: 45px;     /* ปรับขนาดตามความเหมาะสมของดีไซน์ */
             width: auto;
+
         }
       </style>
       <nav>
