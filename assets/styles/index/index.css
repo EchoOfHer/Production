@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: #2B2B2B;
+}
+.main-element{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#logo-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative; /* สำคัญ: เพื่อให้กล่องส้มอ้างอิงตำแหน่งจากตรงนี้ */
+    padding-top: 80px;  /* เว้นที่ด้านบนไว้ให้โลโก้ ไม่ให้โดน Navbar ทับ */
+}
+
+#logo {
+    height: 150px;     /* ปรับขนาดตามความเหมาะสมของดีไซน์ */
+    width: auto;
+    z-index: 10;       /* ให้โลโก้อยู่เหนือกล่องส้ม */
+    position: relative;
+    margin-right: 100px;
+}
+
+#box {
+    width: 286px;
+    height: 350px;      /* เพิ่มความสูงให้ยาวลงมาตามภาพ */
+    background-color: #DF5F30;
+    
+    /* ทริคทำให้ชิดขอบบนสุด */
+    position: absolute; 
+    top: -100px;        /* ปรับค่าลบ เพื่อให้มันพุ่งย้อนกลับขึ้นไปทับ Navbar */
+    left: 200px;        /* ปรับตำแหน่งซ้าย-ขวาให้ตรงตามดีไซน์ */
+    
+    border-bottom-right-radius: 80px; /* เพิ่มความโค้งที่มุมขวาล่างตามรูป */
+    z-index: 1;         /* อยู่ข้างหลังโลโก้ */
+}
