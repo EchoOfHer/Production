@@ -5,6 +5,8 @@ body {
 .main-element{
     margin-left: 100px;
     margin-right: 100px;
+    display: flex;
+    flex-direction: row;
 }
 #logo-box {
     display: flex;
@@ -15,24 +17,112 @@ body {
     padding-top: 80px;  /* เว้นที่ด้านบนไว้ให้โลโก้ ไม่ให้โดน Navbar ทับ */
 }
 
-#logo {
-    height: 150px;     /* ปรับขนาดตามความเหมาะสมของดีไซน์ */
-    width: auto;
-    z-index: 10;       /* ให้โลโก้อยู่เหนือกล่องส้ม */
-    position: relative;
-    margin-right: 100px;
-}
-
-#box {
+#orange-box {
     width: 286px;
-    height: 350px;      /* เพิ่มความสูงให้ยาวลงมาตามภาพ */
+    height: 290px;      /* เพิ่มความสูงให้ยาวลงมาตามภาพ */
     background-color: #DF5F30;
     
     /* ทริคทำให้ชิดขอบบนสุด */
     position: absolute; 
     top: -100px;        /* ปรับค่าลบ เพื่อให้มันพุ่งย้อนกลับขึ้นไปทับ Navbar */
-    left: 200px;        /* ปรับตำแหน่งซ้าย-ขวาให้ตรงตามดีไซน์ */
+    left: 320px;   
     
     border-bottom-right-radius: 80px; /* เพิ่มความโค้งที่มุมขวาล่างตามรูป */
     z-index: 1;         /* อยู่ข้างหลังโลโก้ */
+}
+
+#man{
+    width: 286px;
+    height: 426px;
+    margin-top: 150px;
+}
+#left-site{
+    display: flex;
+    flex-direction: row;
+}
+#blue-box{
+    margin-left: 30px;
+    margin-top: 135px;
+    background-color: #363459;
+    width: 286px;
+    height: 355px;
+
+    clip-path: path('M 0 0 L 286 0 L 286 290 Q 143 170 0 290 Z');
+
+    border-top-right-radius: 100px;
+}
+#outer-circle {
+    width: 237px;
+    height: 237px;
+    
+    /* แก้ไขตรงนี้: รวม style, width, และ color เข้าด้วยกัน */
+    border: 30px solid #FFFFFF; 
+    
+    /* ใช้ 50% เพื่อความเป็นวงกลมที่แน่นอน */
+    border-radius: 50%; 
+    
+    /* ป้องกันไม่ให้ border ไปเพิ่มขนาดของกล่อง */
+    box-sizing: border-box; 
+
+    /* positioning */
+    margin-top: -100px ;
+    margin-left: 55px;
+    z-index: 1;   
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center;
+    position: relative;
+}
+#inside-circle{
+    width: 96px;
+    height: 96px;
+    background-color: #DF5F30;
+    
+    /* ใช้ 50% เพื่อความเป็นวงกลมที่แน่นอน */
+    border-radius: 50%; 
+    
+    /* ป้องกันไม่ให้ border ไปเพิ่มขนาดของกล่อง */
+    box-sizing: border-box; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#under-man{
+    margin-top: -30px;
+    height: 150px;
+    width: 286px;
+    background-color: #FF9248;
+    border-radius: 0px 0px 100px 0px;
+    clip-path: path('M 0 50 L 200 50 Q 250 50 286 0 L 286 150 L 0 150 Z');
+}
+#Redbox-underman{
+    margin-top: 25px;
+    background-color: #AD3D3D;
+    width: 286px;
+    height: 240px;
+    border-radius: 0px 100px 0px 100px;
+}
+.Concept{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 70%;             /* หรือกำหนดความสูง เช่น 355px ให้เท่ากับ blue-box */
+    font-family: 'SourceSan3'; 
+    color: white;
+}
+#right-in-blue-box{
+    /* margin-top: 100px; */
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 0;
+}
+#Subconcept-in-blue-box {
+    margin-top: 5px;  /* ปรับระยะห่างด้านบนของคำบรรยายตามใจชอบ */
+    color: white;
+}
+#right-element{
+    margin-left: 200px;
 }

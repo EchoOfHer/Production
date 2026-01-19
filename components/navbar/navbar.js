@@ -20,16 +20,18 @@ class MyNavbar extends HTMLElement {
             background: #2B2B2B;
             padding: 25px 100px;
             display: flex;
-            justify-content: flex-end;
+            
+            align-items: center; /* 2. เพิ่มอันนี้เพื่อให้ Logo กับตัวหนังสือตรงกันในแนวตั้ง */
+            
             position: relative; 
             opacity: 0.7;
-            z-index: 5; /* ให้เมนูอยู่สูงกว่ากล่องส้ม */
+            z-index: 5;
         }
         nav a {
             font-weight: 100;
             padding-right: 20px;
             color: white;
-            margin-right: 15px;
+            margin-right: 130px;
             text-decoration: none;
             font-family: 'SourceSan3';
             font-weight:lighter;
@@ -39,11 +41,24 @@ class MyNavbar extends HTMLElement {
         nav a:hover {
             font-weight: bold;
         }
+        nav icon{
+            margin-right: auto; 
+            
+            display: flex; /* จัดให้รูปข้างใน icon ตรงกลาง */
+            align-items: center;
+        }
+        img{
+            height: 45px;     /* ปรับขนาดตามความเหมาะสมของดีไซน์ */
+            width: auto;
+        }
       </style>
       <nav>
-        <a href="index.html">HOME</a>
-        <a href="prototype.html">PROTOTYPE</a>
-        <a href="team.html">TEAM</a>
+        <icon>
+            <img src="/assets/images/logo.png" alt="Girl in a jacket">
+        </icon>
+        <a href="../index.html">HOME</a>
+        <a href="/views/prototype.html">PROTOTYPE</a>
+        <a href="/views/member.html">TEAM</a>
         <a href="contact.html">CONTACT</a>
     </nav>
     `;
