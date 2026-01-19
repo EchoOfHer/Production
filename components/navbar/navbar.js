@@ -42,7 +42,7 @@ class MyNavbar extends HTMLElement {
       </style>
       <nav>
         <a href="index.html">HOME</a>
-        <a href="prototype.html">PROTOTYPE</a>
+        <a href="/views/prototype.html">PROTOTYPE</a>
         <a href="team.html">TEAM</a>
         <a href="contact.html">CONTACT</a>
     </nav>
