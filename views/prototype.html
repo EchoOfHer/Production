@@ -6,152 +6,8 @@
     <title>prototype</title>
     <script src="/components/navbar/navbar.js" defer></script>
     <!-- <script src="/components/navbar/navbar.js" defer></script> -->
-    
-    <style>
-        /* ดึง CSS พื้นฐานที่คุณมีมาใช้ */
-        body {
-            margin: 0;
-            background-color: #2B2B2B;
-            /* */
-            font-family: 'SourceSans3', sans-serif;
-            color: white;
-        }
-    
-        .main-element {
-            margin-left: 100px;
-            /* */
-            margin-right: 100px;
-            /* */
-        }
-    
-        /* แก้ไขส่วนหุ้มโลโก้ */
-        #logo-box {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
-            position: absolute;
-            /* เปลี่ยนจาก relative เป็น absolute เพื่อให้มันไม่กินที่เนื้อหาด้านล่าง */
-            top: 20px;
-            /* ปรับระยะจากขอบบนให้เท่ากับระดับสายตาของ Navbar */
-            left: 100px;
-            /* ให้ตรงกับระยะ margin ของหน้าเว็บ */
-            z-index: 100;
-            /* ดันให้สูงกว่า Navbar เพื่อให้โลโก้กดคลิกได้ */
-        }
-    
-        #logo {
-            height: 60px;
-            /* ลดขนาดลงเพื่อให้พอดีกับแถบเมนู (ปรับเพิ่ม/ลดได้ตามใจชอบ) */
-            width: auto;
-            position: relative;
-            z-index: 10;
-        }
-    
-        #box {
-            width: 286px;
-            height: 350px;
-            background-color: #DF5F30;
-            position: absolute;
-            top: -40px;
-            /* ขยับกล่องส้มขึ้นตามโลโก้ */
-            left: 100px;
-            /* ปรับตำแหน่งให้เหมาะสมกับดีไซน์ใหม่ */
-            border-bottom-right-radius: 80px;
-            z-index: -1;
-            /* ให้กล่องส้มอยู่หลังสุดจริงๆ */
-        }
-    
-        /* ส่วนเนื้อหา Prototype */
-        .hero-section {
-            margin-top: 180px;
-        }
-    
-        h1 {
-            font-size: 64px;
-            margin: 0;
-        }
-    
-        h1 span {
-            color: #DF5F30;
-            /* เน้นคำว่า Works? */
-        }
-    
-        .description {
-            max-width: 500px;
-            font-size: 18px;
-            color: #AAAAAA;
-            margin-top: 20px;
-            line-height: 1.5;
-        }
-    
-        /* การจัดวางภาพคนงานที่มีขอบโค้ง */
-        .image-header-container {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: -150px;
-        }
-    
-        .image-header {
-            width: 500px;
-            height: auto;
-            border-radius: 80px 0 80px 0;
-            /* โค้งสลับมุมตามรูป */
-            opacity: 0.8;
-        }
-    
-        /* ขั้นตอน 01 และ 02 */
-        .step-container {
-            margin-top: 100px;
-        }
-    
-        .step-row {
-            display: flex;
-            gap: 50px;
-            margin-bottom: 80px;
-            align-items: center;
-        }
-    
-        .step-content {
-            flex: 1;
-        }
-    
-        .step-number {
-            font-size: 80px;
-            font-weight: bold;
-            line-height: 1;
-        }
-    
-        .step-title {
-            font-size: 32px;
-            margin: 10px 0;
-        }
-    
-        .step-image {
-            width: 450px;
-            border-radius: 15px;
-            border: 1px solid #444;
-        }
-    
-        /* ส่วน Monitor System (Dashboard) */
-        .monitor-section {
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            margin-top: 120px;
-            padding-bottom: 100px;
-        }
-    
-        .dashboard-preview {
-            width: 60%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-    
-        .orange-text {
-            color: #DF5F30;
-        }
-    </style>
+     <link rel="stylesheet" href="/assets/styles/prototype/prototype.css">
+
 </head>
 <body>
     <main-navbar></main-navbar> 
@@ -164,7 +20,7 @@
         </div>
 
         <section class="hero-section">
-            <h1>How Right Site<br><span>Works?</span></h1>
+            <h1>How Right Site</h1><br><h1><span>Works?</span></h1>
             <p class="description">
                 AI-powered CCTV cameras monitor the site to detect missing safety equipment 
                 and unsafe proximity to dangerous machinery, ensuring worker safety.
@@ -173,7 +29,7 @@
                 <img src="/assets/images/image.png" class="image-header" alt="Construction Worker"> </div>
         </section>
 
-        <hr style="border: 0.5px solid #444; margin: 100px 0;">
+        <hr style="border: 0.5px solid #444; margin: 150px 0;">
 
         <section class="step-container">
             <div class="step-row">
