@@ -6,12 +6,8 @@ class MyNavbar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
       <style>
-        @font-face {
-            font-family: 'SourceSan3'; /* Give it a name you'll use later */
-            src: url('/assets/fonts/SourceSans3-VariableFont_wght.ttf') format('truetype'); /* Path to your file */
-            font-weight: normal;
-            font-style: normal;
-        }
+        /* CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             margin: 0;
             background-color: #2B2B2B;
@@ -28,41 +24,53 @@ class MyNavbar extends HTMLElement {
             z-index: 5;
         }
         nav a {
-            font-weight: 100;
-            padding-right: 20px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
             color: white;
             margin-right: 130px;
-            text-decoration: none;
-            font-family: 'SourceSan3';
-            font-weight:lighter;
+            font-family: 'Inter';
+            font-weight: 100; /* ตัวบางปกติ */
             font-size: 24px;
+            transition: color 0.3s;
+        }
+
+    /* หัวใจสำคัญ: สร้างพื้นที่สำรองสำหรับตัวหนา */
+        nav a::before {
+            display: block;
+            content: attr(data-text); /* ดึงข้อความจาก data-text มา */
+            font-weight: bold;         /* สั่งให้เป็นตัวหนา */
+            height: 0;                /* ทำให้ไม่มีความสูง จะได้ไม่ดันบรรทัด */
+            visibility: hidden;       /* ซ่อนไว้เพื่อจองพื้นที่ความกว้างเฉยๆ */
         }
 
         nav a:hover {
-            font-weight: bold;
-            color:#FF9248;
+            font-weight: bold;         /* เมื่อ Hover ค่อยเปลี่ยนเป็นตัวหนา */
+            color: #FF9248;
         }
         nav icon{
             margin-right: auto; 
-            
+            margin-left:35px;
             display: flex; /* จัดให้รูปข้างใน icon ตรงกลาง */
             align-items: center;
         }
         img{
+            
             height: 45px;     /* ปรับขนาดตามความเหมาะสมของดีไซน์ */
             width: auto;
 
         }
       </style>
-      <nav>
-        <icon>
-            <img src="/assets/images/logo.png" alt="Girl in a jacket">
-        </icon>
-        <a href="../index.html">HOME</a>
-        <a href="/views/prototype.html">PROTOTYPE</a>
-        <a href="/views/member.html">TEAM</a>
-        <a href="contact.html">CONTACT</a>
-    </nav>
+<nav>
+    <icon>
+        <img src="/assets/images/logo.png" alt="Logo">
+    </icon>
+    <a href="../index.html" data-text="HOME">HOME</a>
+    <a href="/views/prototype.html" data-text="PROTOTYPE">PROTOTYPE</a>
+    <a href="team.html" data-text="TEAM">TEAM</a>
+    <a href="contact.html" data-text="CONTACT">CONTACT</a>
+</nav>
     `;
     }
 }

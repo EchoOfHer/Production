@@ -1,159 +1,153 @@
+/* 1. Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+
+/* 2. Base Style */
 body {
     margin: 0;
     background-color: #2B2B2B;
+    font-family: 'Inter', sans-serif;
+    color: white;
 }
+
+/* 3. Layout Structure (Bootstrap Compatible) */
 .main-element {
-    margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* ให้หัวข้อด้านขวาเริ่มจากด้านบน */
+    padding-left: 150px;
+    padding-right: 100px;
+    min-height: 100vh;
 }
 
 .left-element {
-    flex: 0 0 auto; /* ให้ฝั่งซ้ายใช้พื้นที่ตามขนาดของเนื้อหาข้างใน */
-    width: 600px;   /* กำหนดความกว้างคงที่เพื่อให้ฝั่งขวามีที่หายใจ */
+    flex: 0 0 auto;
+    width: 600px; /* ล็อคความกว้างฝั่งซ้ายตามดีไซน์เดิม */
 }
 
 .right-element {
     display: flex;
-    flex: 1;         /* ให้ฝั่งขวาใช้พื้นที่ที่เหลือทั้งหมด */
-    margin-left: 50px; /* ลด margin ลงจาก 200px เพื่อให้เนื้อหาปรากฏในจอ */
-    padding-top: 20px; /* ปรับระดับให้หัวข้อลงมาบาลานซ์กับรูปฝั่งซ้าย */
     flex-direction: column;
+    flex: 1;
     align-items: center;
-    justify-content: center;
-    font-family: 'SourceSan3';
     color: white;
+
+    /* ใช้ตัวนี้แทน margin-top ถ้า margin ไม่ทำงาน */
+    transform: translateY(200px); 
 }
+
+/* 4. Left Side Components */
 #logo-box {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: relative; /* สำคัญ: เพื่อให้กล่องส้มอ้างอิงตำแหน่งจากตรงนี้ */
-    padding-top: 80px;  /* เว้นที่ด้านบนไว้ให้โลโก้ ไม่ให้โดน Navbar ทับ */
+    position: relative;
+    padding-top: 80px;
+    margin-left: 150px;
 }
 
-#orange-box {
-    width: 286px;
-    height: 290px;      /* เพิ่มความสูงให้ยาวลงมาตามภาพ */
-    background-color: #DF5F30;
-    
-    /* ทริคทำให้ชิดขอบบนสุด */
-    position: absolute; 
-    top: -100px;        /* ปรับค่าลบ เพื่อให้มันพุ่งย้อนกลับขึ้นไปทับ Navbar */
-    left: 320px;   
-    
-    border-bottom-right-radius: 80px; /* เพิ่มความโค้งที่มุมขวาล่างตามรูป */
-    z-index: 1;         /* อยู่ข้างหลังโลโก้ */
-}
-
-#man{
+#man {
     width: 286px;
     height: 426px;
     margin-top: 150px;
+    object-fit: cover; /* Crop รูปให้อัตโนมัติ */
+    object-position: top;
 }
-#left-site{
-    display: flex;
-    flex-direction: row;
+
+#under-man {
+    width: 286px;
+    height: 150px;
+    margin-top: -30px;
+    background-color: #FF9248;
+    border-radius: 0 0 100px 0;
+    /* ส่วนโค้งงอนแหลมตามภาพที่คุณต้องการ */
+    clip-path: path('M 0 50 L 200 50 Q 250 50 286 0 L 286 150 L 0 150 Z');
 }
-#blue-box{
-    margin-left: 30px;
-    margin-top: 130px;
-    background-color: #363459;
+
+#Redbox-underman {
+    width: 286px;
+    height: 240px;
+    margin-top: 25px;
+    background-color: #AD3D3D;
+    border-radius: 0 100px 0 100px;
+}
+
+/* 5. Right Side Decorative Elements */
+#orange-box {
+    width: 286px;
+    height: 290px;
+    background-color: #DF5F30;
+    position: absolute;
+    top: -100px;
+    left: 320px;
+    border-bottom-right-radius: 80px;
+    z-index: 1;
+}
+
+#blue-box {
+    color: white;
     width: 286px;
     height: 355px;
-
-    clip-path: path('M 0 0 L 286 0 L 286 290 Q 143 170 0 290 Z');
-
+    margin-top: 130px;
+    margin-left: 30px;
+    background-color: #363459;
     border-top-right-radius: 100px;
+    clip-path: path('M 0 0 L 286 0 L 286 290 Q 143 170 0 290 Z');
 }
-#outer-circle {
-    width: 237px;
-    height: 237px;
-    
-    /* แก้ไขตรงนี้: รวม style, width, และ color เข้าด้วยกัน */
-    border: 30px solid #FFFFFF; 
-    
-    /* ใช้ 50% เพื่อความเป็นวงกลมที่แน่นอน */
-    border-radius: 50%; 
-    
-    /* ป้องกันไม่ให้ border ไปเพิ่มขนาดของกล่อง */
-    box-sizing: border-box; 
 
-    /* positioning */
-    margin-top: -100px ;
-    margin-left: 55px;
-    z-index: 1;   
+#outer-circle {
     display: flex;
-    justify-content: center; /* จัดกลางแนวนอน */
+    justify-content: center;
     align-items: center;
     position: relative;
+    width: 237px;
+    height: 237px;
+    margin-top: -100px;
+    margin-left: 55px;
+    border: 30px solid #FFFFFF;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 1;
 }
-#inside-circle{
+
+#inside-circle {
     width: 96px;
     height: 96px;
     background-color: #DF5F30;
-    
-    /* ใช้ 50% เพื่อความเป็นวงกลมที่แน่นอน */
-    border-radius: 50%; 
-    
-    /* ป้องกันไม่ให้ border ไปเพิ่มขนาดของกล่อง */
-    box-sizing: border-box; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 50%;
 }
-#under-man{
-    margin-top: -30px;
-    height: 150px;
-    width: 286px;
-    background-color: #FF9248;
-    border-radius: 0px 0px 100px 0px;
-    clip-path: path('M 0 50 L 200 50 Q 250 50 286 0 L 286 150 L 0 150 Z');
-}
-#Redbox-underman{
-    margin-top: 25px;
-    background-color: #AD3D3D;
-    width: 286px;
-    height: 240px;
-    border-radius: 0px 100px 0px 100px;
-}
-.Concept{
+
+/* 6. Text Content Style */
+.Concept {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: center;
-    height: 70%;             /* หรือกำหนดความสูง เช่น 355px ให้เท่ากับ blue-box */
-    font-family: 'SourceSan3'; 
-    color: white;
+    height: 70%;
+
 }
-#right-in-blue-box{
-    /* margin-top: 100px; */
-  font-weight: bold;
-  font-size: 50px;
-  color: white;
-  margin-bottom: 0;
+
+#right-in-blue-box {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 0;
 }
+
 #Subconcept-in-blue-box {
-    margin-top: 5px;  /* ปรับระยะห่างด้านบนของคำบรรยายตามใจชอบ */
-    color: white;
+    margin-top: 5px;
     font-size: 25px;
 }
-#Header{
-    font-weight: bold;
+
+#Header {
+    font-weight: 800; /* ใช้ความหนาของ Inter */
     font-size: 96px;
     letter-spacing: 3.5px;
-    text-align: center;       
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
-#Sub-detail{
-    
-    margin: 0px 150px 0px 200px;
-    font-size: 33px;
-    font-weight:100;
+
+#Sub-detail {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 150px 0 175px;
+    font-size: 28px;
+    font-weight: 300;
     text-indent: 100px;
     text-align: justify;
-    
+    text-justify: inter-word;
 }
