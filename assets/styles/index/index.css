@@ -151,3 +151,57 @@ body {
     text-align: justify;
     text-justify: inter-word;
 }
+/* --- ส่วนฝั่งซ้าย (P1) --- */
+/* --- ส่วนฝั่งซ้าย (P1) --- */
+#secDivider-P1 {
+    width: 286px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    
+    top: 900px; 
+    
+    right: -30px; /* ดันไปชนขอบ col-auto เหมือนเดิม */
+    z-index: 2;
+}
+
+/* --- ส่วนฝั่งขวา (P2) --- */
+#secDivider-P2 {
+    width: 1100px;
+    height: 5px;
+    background-color: white;
+    
+    /* ลบ margin-top ที่เป็นเลขเยอะๆ ออก แล้วใช้ transform หรือ margin ที่พอดีกับ P1 */
+    margin: 0;
+    margin-left: -496px;
+    
+    /* ปรับตำแหน่งให้ตรงกับ P1 โดยอ้างอิงจากระยะที่เลื่อนลงมา */
+    position: relative;
+    top: -161px; 
+}
+
+/* ปรับแก้ขอบ col ของ Bootstrap ไม่ให้มีระยะห่าง */
+.left-element, .right-element {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.main-element {
+    padding-left: 150px;
+    padding-right: 100px;
+    overflow-x: hidden; /* ป้องกันเส้นแลบออกนอกจอถ้ากำหนด width เกิน */
+}
+/* ปรับปรุง CSS เดิมของคุณ */
+#Constructman {
+    width: 180px;
+    height: auto;
+    margin-top: 100px;
+    margin-right: 150px; /* ระยะห่างจากขอบขวาตามที่คุณตั้งไว้ */
+}
+
+#downArrow {
+    width: 61px;
+    height: auto;
+    margin-right: 175px; /* ปรับตัวเลขนี้เพื่อให้ลูกศรอยู่ตรงกลางใต้ตัวคนพอดี (150px + ความต่างความกว้าง) */
+    margin-top: 10px;    /* ระยะห่างระหว่างคนกับลูกศร */
+}

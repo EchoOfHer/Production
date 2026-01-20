@@ -22,6 +22,12 @@ class MyNavbar extends HTMLElement {
             position: relative; 
             opacity: 0.7;
             z-index: 5;
+
+            position: fixed;   /* ล็อคตำแหน่งให้อยู่กับที่ */
+            top: 0;            /* ชิดขอบบน */
+            left: 0;           /* ชิดขอบซ้าย */
+            width: 100%;       /* ยืดให้เต็มความกว้างหน้าจอ */
+            box-sizing: border-box;
         }
         nav a {
             display: inline-flex;
