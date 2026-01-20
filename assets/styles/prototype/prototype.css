@@ -55,7 +55,7 @@ body {
     
         /* ส่วนเนื้อหา Prototype */
         .hero-section {
-            margin-top: 180px;
+            margin-top: 250px;
         }
     
         h1 {
@@ -80,7 +80,9 @@ body {
         .image-header-container {
             display: flex;
             justify-content: flex-end;
-            margin-top: 0px;
+            margin-top: -350px;
+            /* padding-right: 50px;     หรือเพิ่ม padding ขวาเพื่อดันรูปมาทางซ้าย */
+            
         }
     
         .image-header {
@@ -89,6 +91,7 @@ body {
             border-radius: 80px 0 80px 0;
             /* โค้งสลับมุมตามรูป */
             opacity: 0.8;
+            margin-right: 120px; /* ยิ่งตัวเลขมาก รูปจะยิ่งขยับไปทางซ้ายมากขึ้น */
         }
     
         /* ขั้นตอน 01 และ 02 */
