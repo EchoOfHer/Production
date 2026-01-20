@@ -103,7 +103,7 @@ h1 span {
     height: 380px;       /* ปรับความสูงให้ไล่เลี่ยกับความสูงของรูป */
     background-color: #DF5F30;
     position: absolute;
-    right: 80px;         /* ตำแหน่งชิดขวา */
+    right: 10px;         /* ตำแหน่งชิดขวา */
     top: 0px;            /* ตั้งค่าเป็น 0 เพราะเราจะให้มันอิงตาม container ของรูป */
     border-radius: 0 0 80px 0; /* โค้งเฉพาะมุมขวาล่างตามรูปตัวอย่าง */
     z-index: 1;
