@@ -1,147 +1,181 @@
-/* <style> */
-/* </style> */
 body {
-            margin: 0;
-            background-color: #2B2B2B;
-            /* */
-            font-family: 'SourceSans3', sans-serif;
-            color: white;
-        }
-    
-        .main-element {
-            margin-left: 100px;
-            /* */
-            margin-right: 100px;
-            /* */
-        }
-    
-        /* แก้ไขส่วนหุ้มโลโก้ */
-        #logo-box {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
-            position: absolute;
-            /* เปลี่ยนจาก relative เป็น absolute เพื่อให้มันไม่กินที่เนื้อหาด้านล่าง */
-            top: 20px;
-            /* ปรับระยะจากขอบบนให้เท่ากับระดับสายตาของ Navbar */
-            left: 100px;
-            /* ให้ตรงกับระยะ margin ของหน้าเว็บ */
-            z-index: 100;
-            /* ดันให้สูงกว่า Navbar เพื่อให้โลโก้กดคลิกได้ */
-        }
-    
-        #logo {
-            height: 150px;
-            /* ลดขนาดลงเพื่อให้พอดีกับแถบเมนู (ปรับเพิ่ม/ลดได้ตามใจชอบ) */
-            width: auto;
-            position: relative;
-            z-index: 10;
-        }
-    
-        #box {
-            width: 286px;
-            height: 153px;
-            background-color: #DF5F30;
-            position: absolute;
-            top: -40px;
-            /* ขยับกล่องส้มขึ้นตามโลโก้ */
-            left: 280px;
-            /* ปรับตำแหน่งให้เหมาะสมกับดีไซน์ใหม่ */
-            border-bottom-right-radius: 80px;
-            z-index: -1;
-            /* ให้กล่องส้มอยู่หลังสุดจริงๆ */
-        }
-    
-        /* ส่วนเนื้อหา Prototype */
-        .hero-section {
-            margin-top: 250px;
-        }
-    
-        h1 {
-            font-size: 64px;
-            margin: 0;
-        }
-    
-        h1 span {
-            color: #DF5F30;
-            /* เน้นคำว่า Works? */
-        }
-    
-        .description {
-            max-width: 500px;
-            font-size: 18px;
-            color: #AAAAAA;
-            margin-top: 20px;
-            line-height: 1.5;
-        }
-    
-        /* การจัดวางภาพคนงานที่มีขอบโค้ง */
-        .image-header-container {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: -350px;
-            /* padding-right: 50px;     หรือเพิ่ม padding ขวาเพื่อดันรูปมาทางซ้าย */
-            
-        }
-    
-        .image-header {
-            width: 500px;
-            height: auto;
-            border-radius: 80px 0 80px 0;
-            /* โค้งสลับมุมตามรูป */
-            opacity: 0.8;
-            margin-right: 120px; /* ยิ่งตัวเลขมาก รูปจะยิ่งขยับไปทางซ้ายมากขึ้น */
-        }
-    
-        /* ขั้นตอน 01 และ 02 */
-        .step-container {
-            margin-top: 100px;
-        }
-    
-        .step-row {
-            display: flex;
-            gap: 50px;
-            margin-bottom: 80px;
-            align-items: center;
-        }
-    
-        .step-content {
-            flex: 1;
-        }
-    
-        .step-number {
-            font-size: 80px;
-            font-weight: bold;
-            line-height: 1;
-        }
-    
-        .step-title {
-            font-size: 32px;
-            margin: 10px 0;
-        }
-    
-        .step-image {
-            width: 450px;
-            border-radius: 15px;
-            border: 1px solid #444;
-        }
-    
-        /* ส่วน Monitor System (Dashboard) */
-        .monitor-section {
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            margin-top: 120px;
-            padding-bottom: 100px;
-        }
-    
-        .dashboard-preview {
-            width: 60%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-    
-        .orange-text {
-            color: #DF5F30;
-        }
+    margin: 0;
+    background-color: #2B2B2B;
+    /* */
+    font-family: 'SourceSans3', sans-serif;
+    color: white;
+}
+
+.main-element {
+    margin-left: 100px;
+    /* */
+    margin-right: 100px;
+    /* */
+}
+
+/* แก้ไขส่วนหุ้มโลโก้ */
+#logo-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    /* เปลี่ยนจาก relative เป็น absolute เพื่อให้มันไม่กินที่เนื้อหาด้านล่าง */
+    top: 20px;
+    /* ปรับระยะจากขอบบนให้เท่ากับระดับสายตาของ Navbar */
+    left: 100px;
+    /* ให้ตรงกับระยะ margin ของหน้าเว็บ */
+    z-index: 100;
+    /* ดันให้สูงกว่า Navbar เพื่อให้โลโก้กดคลิกได้ */
+}
+
+#logo {
+    height: 150px;
+    /* ลดขนาดลงเพื่อให้พอดีกับแถบเมนู (ปรับเพิ่ม/ลดได้ตามใจชอบ) */
+    width: auto;
+    position: relative;
+    z-index: 10;
+}
+
+#box {
+    width: 286px;
+    height: 153px;
+    background-color: #DF5F30;
+    position: absolute;
+    top: -40px;
+    /* ขยับกล่องส้มขึ้นตามโลโก้ */
+    left: 280px;
+    /* ปรับตำแหน่งให้เหมาะสมกับดีไซน์ใหม่ */
+    border-bottom-right-radius: 80px;
+    z-index: -1;
+    /* ให้กล่องส้มอยู่หลังสุดจริงๆ */
+}
+
+/* ส่วนเนื้อหา Prototype */
+.hero-section {
+    margin-top: 250px;
+}
+
+h1 {
+    font-size: 64px;
+    margin: 0;
+    /* เพิ่ม line-height และ font-weight เพื่อปรับให้ดูหนาน้อยลง */
+    line-height: 1.1;
+    font-weight: 1;
+}
+
+h1 span {
+    color: #DF5F30;
+    /* เน้นคำว่า Works? */
+    font-weight: 700;
+}
+
+.description {
+    max-width: 550px;
+    font-size: 18px;
+    color: #AAAAAA;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* การจัดวางภาพคนงานที่มีขอบโค้ง */
+.image-header-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -350px;
+    /* padding-right: 50px;     หรือเพิ่ม padding ขวาเพื่อดันรูปมาทางซ้าย */
+
+}
+
+.image-header {
+    width: 500px;
+    height: auto;
+    border-radius: 80px 0 80px 0;
+    /* โค้งสลับมุมตามรูป */
+    opacity: 0.8;
+    margin-right: 120px;
+    /* ยิ่งตัวเลขมาก รูปจะยิ่งขยับไปทางซ้ายมากขึ้น */
+}
+
+/* --- กล่องสีส้มเล็กด้านขวาของรูปคนงาน --- */
+#box-secondary {
+    width: 80px;         /* ปรับความกว้างให้แคบลงตามดีไซน์ */
+    height: 380px;       /* ปรับความสูงให้ไล่เลี่ยกับความสูงของรูป */
+    background-color: #DF5F30;
+    position: absolute;
+    right: 80px;         /* ตำแหน่งชิดขวา */
+    top: 0px;            /* ตั้งค่าเป็น 0 เพราะเราจะให้มันอิงตาม container ของรูป */
+    border-radius: 0 0 80px 0; /* โค้งเฉพาะมุมขวาล่างตามรูปตัวอย่าง */
+    z-index: 1;
+}
+
+/* ปรับ Container ให้คุมทั้งรูปและกล่องส้มขวา */
+.image-header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: -380px;  /* ดึงขึ้นไปขนานกับข้อความ */
+    position: relative;  /* สำคัญ: เพื่อให้กล่องส้มอิงตำแหน่งจากตรงนี้ */
+    gap: 20px;           /* ระยะห่างระหว่างรูปกับกล่องส้มขวา */
+}
+
+.image-header {
+    width: 550px;        /* ปรับขนาดรูปตามความเหมาะสม */
+    height: auto;
+    border-radius: 80px 0 80px 0;
+    opacity: 1;
+    position: relative;
+    z-index: 5;          /* ให้รูปอยู่เลเยอร์เดียวกับกล่องหรือทับกันเล็กน้อย */
+}
+
+/* ขั้นตอน 01 และ 02 */
+.step-container {
+    margin-top: 100px;
+}
+
+.step-row {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-number {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.step-title {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.step-image {
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid #444;
+}
+
+/* ส่วน Monitor System (Dashboard) */
+.monitor-section {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-top: 120px;
+    padding-bottom: 100px;
+}
+
+.dashboard-preview {
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.orange-text {
+    color: #DF5F30;
+}

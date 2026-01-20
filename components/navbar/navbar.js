@@ -18,7 +18,7 @@ class MyNavbar extends HTMLElement {
         }
         nav {
             background: #2B2B2B;
-            padding: 25px 100px;
+            padding: 25px 10px;
             display: flex;
             justify-content: flex-end;
             position: relative; 
@@ -27,16 +27,15 @@ class MyNavbar extends HTMLElement {
         }
         nav a {
             font-weight: 100;
-            padding-right: 40px; /* เพิ่มจาก 20px เป็น 40px (ระยะห่างภายในปุ่ม) */
+            padding-right: 60px;
             color: white;
-            margin-right: 30px;  /* เพิ่มจาก 15px เป็น 30px (ระยะห่างระหว่างปุ่ม) */
+            margin-right: 30px;
             text-decoration: none;
             font-family: 'SourceSan3';
-            font-weight: lighter;
+            font-weight:lighter;
             font-size: 24px;
-            // เพิ่มระยะห่างระหว่างแต่ละปุ่ม
         }
-
+        
         nav a:hover {
             font-weight: bold;
         }

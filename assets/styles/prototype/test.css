@@ -1,0 +1,98 @@
+/* --- CSS ทั้งหมดที่รวมการเพิ่มกล่องส้มข้างรูป --- */
+
+body {
+    margin: 0;
+    background-color: #2B2B2B;
+    font-family: 'SourceSans3', sans-serif;
+    color: white;
+}
+
+.main-element {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* ส่วนหัว Logo และกล่องส้มบน */
+#logo-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    z-index: 100;
+}
+
+#logo {
+    height: 150px;
+    width: auto;
+    position: relative;
+    z-index: 10;
+}
+
+#box {
+    width: 286px;
+    height: 153px;
+    background-color: #DF5F30;
+    position: absolute;
+    top: -40px;
+    left: 280px;
+    border-bottom-right-radius: 80px;
+    z-index: -1;
+}
+
+/* --- เพิ่มกล่องสีส้มใหม่ข้างรูปคนงาน --- */
+#box-secondary {
+    width: 300px;  /* ปรับขนาดความกว้างตามใจชอบ */
+    height: 400px; /* ปรับขนาดความสูงตามใจชอบ */
+    background-color: #DF5F30;
+    position: absolute;
+    right: 80px;   /* ตำแหน่งด้านขวา */
+    top: 200px;    /* ปรับระดับสูง-ต่ำให้ขนานกับรูป */
+    border-radius: 0 80px 0 80px; /* โค้งสลับมุมให้ล้อไปกับรูป */
+    z-index: -1;   /* ให้อยู่หลังรูปภาพ */
+}
+
+.hero-section {
+    margin-top: 250px;
+    position: relative; /* เพื่อให้กล่องส้มใหม่ยึดตำแหน่งจากส่วนนี้ */
+}
+
+h1 {
+    font-size: 64px;
+    margin: 0;
+    line-height: 1.1;
+    font-weight: 300; /* ปรับให้บางลงตามที่ต้องการ */
+}
+
+h1 span {
+    color: #DF5F30;
+    font-weight: 700; /* คำว่า Works? หนาเหมือนเดิม */
+}
+
+.description {
+    max-width: 550px;
+    font-size: 18px;
+    color: #AAAAAA;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* การจัดวางภาพคนงาน */
+.image-header-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -350px;
+}
+
+.image-header {
+    width: 500px;
+    height: auto;
+    border-radius: 80px 0 80px 0;
+    opacity: 0.9;
+    margin-right: 120px;
+    position: relative;
+    z-index: 2; /* ดันรูปให้อยู่ทับกล่องส้มใหม่ */
+}
+
