@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
 
+
+
 /* 2. Base Style */
 body {
     margin: 0;
@@ -60,7 +62,7 @@ body {
 
 #Redbox-underman {
     width: 286px;
-    height: 240px;
+    height: 300px;
     margin-top: 25px;
     background-color: #AD3D3D;
     border-radius: 0 100px 0 100px;
@@ -153,7 +155,7 @@ body {
 /* 7. Dividers & Images */
 #secDivider-P1 {
     /* ความยาวเส้นที่ต้องการ (1049px ตามที่คุณระบุ) */
-    width: 1049px; 
+    width: 1300px; 
     height: 5px;
     background-color: white;
     
@@ -164,7 +166,7 @@ body {
     left: 320px; 
     
     /* ปรับระดับความสูงให้ตรงกับดีไซน์เดิม (ลองปรับตัวเลขนี้ให้ตรงกับรอยต่อที่ต้องการ) */
-    top: 900px; 
+    top: 950px; 
     
     z-index: 2;
 }
@@ -174,7 +176,7 @@ body {
 #Constructman {
     width: 180px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-right: 150px; 
 }
 
@@ -182,11 +184,110 @@ body {
     width: 61px;
     height: auto;
     /* คำนวณให้กึ่งกลางตัวคน: 150px (margin ขวาคน) + (180px-61px)/2 */
-    margin-right: 210px; 
+    margin-right: 180px; 
     margin-top: 10px;
 }
 
 .left-element, .right-element {
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+/* #second-part{
+    margin-top: 0px;
+} */
+#top-border-box1{
+    margin-left: 160px;
+    background-color: #DF5F30;
+    width: 290px;
+    height: 20px;
+}
+#top-border-box2{
+    background-color: #363459;
+    width: 300px;
+    height: 20px;
+}
+#top-border-box3{
+    background-color: #AD3D3D;
+    width: 436px;
+    height: 20px;
+}
+
+.whatHeader {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: left; */
+    /* 1. เปลี่ยนจาก center เป็น left */
+    text-align: start; 
+    
+    /* 2. ใส่ margin-left ให้เท่ากับเส้นด้านบน */
+    margin-left: 160px; 
+    
+    color: white;
+    font-size: 128px;
+    line-height: 0.9; /* ปรับให้ตัวอักษรไม่ห่างกันเกินไปแนวตั้ง */
+}
+.left-box2{
+    margin-left: 100px;
+}
+#seperator {
+    background-color: white;
+    height: 800px; /* ตรวจสอบว่าความสูงเพียงพอ */
+    width: 3px;
+    display: block; /* มั่นใจว่ามันจะแสดงผลเป็นก้อน */
+    margin: 0 auto; /* จัดให้อยู่กึ่งกลางของ col-1 */
+}
+#P1{
+    align-items: center;
+    width: 280px;
+    height: 280px;
+}
+#NumP1{
+    font-size: 96px;
+}
+#Detail1{
+    font-size: 36px;
+}
+#small-D1{
+    font-size: 30px;
+    text-align: end;
+    font-weight: lighter;
+}
+#top-border-box4{
+    background-color: #FF9248 ;
+    width: 360px;
+    height: 20px;
+}
+#P2{
+    width: 426px;
+    height:321px;
+    margin-top: 130px;
+}
+#Detail2{
+font-size: 36px;
+margin-left: 50px;
+margin-top: 60px;
+}
+#small-D2{
+    font-size: 30px;
+    text-align: end;
+    font-weight: lighter;
+}
+#P3{
+    width: 344px;
+    height: 275px;
+}
+#Detail3{
+    font-size: 36px;
+    margin-left: 20px;
+    
+}
+#help{
+    color: #DF5F30;
+    font-size: 80px;
+    text-align: end;
+    margin-top: 160px;
+}
+#table{
+    width: 136px;
+    height: 477px;
 }

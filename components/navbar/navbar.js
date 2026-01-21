@@ -12,35 +12,44 @@ class MyNavbar extends HTMLElement {
             margin: 0;
             background-color: #2B2B2B;
         }
-        nav {
-            background: #2B2B2B;
-            padding: 25px 100px;
-            display: flex;
-            
-            align-items: center; /* 2. เพิ่มอันนี้เพื่อให้ Logo กับตัวหนังสือตรงกันในแนวตั้ง */
-            
-            position: relative; 
-            opacity: 0.7;
-            z-index: 5;
+        /* ภายใน connectedCallback() ส่วนของ <style> */
 
-            position: fixed;   /* ล็อคตำแหน่งให้อยู่กับที่ */
-            top: 0;            /* ชิดขอบบน */
-            left: 0;           /* ชิดขอบซ้าย */
-            width: 100%;       /* ยืดให้เต็มความกว้างหน้าจอ */
-            box-sizing: border-box;
-        }
-        nav a {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            margin-right: 130px;
-            font-family: 'Inter';
-            font-weight: 100; /* ตัวบางปกติ */
-            font-size: 24px;
-            transition: color 0.3s;
-        }
+nav {
+    /* 1. ใช้ rgba เพื่อให้พื้นหลังโปร่งแสงแต่ตัวหนังสือชัด (0.7 คือความจาง) */
+    background: rgba(43, 43, 43, 0.7); 
+    
+    padding: 25px 100px;
+    display: flex;
+    align-items: center;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 5;
+    
+    /* 2. เพิ่ม Backdrop-filter เพื่อให้พื้นหลังเบลอ (ดูโมเดิร์นขึ้น) - ใส่หรือไม่ใส่ก็ได้ */
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(10px);
+
+    /* ลบ opacity: 0.7; ของเดิมออก */
+}
+
+nav a {
+    /* มั่นใจว่า opacity เป็น 1 */
+    opacity: 1 !important; 
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin-right: 130px;
+    font-family: 'Inter';
+    font-weight: 100;
+    font-size: 24px;
+    transition: color 0.3s, font-weight 0.3s;
+}
 
     /* หัวใจสำคัญ: สร้างพื้นที่สำรองสำหรับตัวหนา */
         nav a::before {
@@ -75,7 +84,7 @@ class MyNavbar extends HTMLElement {
     <a href="../index.html" data-text="HOME">HOME</a>
     <a href="/views/prototype.html" data-text="PROTOTYPE">PROTOTYPE</a>
     <a href="team.html" data-text="TEAM">TEAM</a>
-    <a href="contact.html" data-text="CONTACT">CONTACT</a>
+    <a href="../index.html" data-text="CONTACT">CONTACT</a>
 </nav>
     `;
     }
