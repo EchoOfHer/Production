@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* เพิ่มส่วนนี้เพื่อแก้ปัญหา Navbar (ที่ Fixed อยู่ข้างบน) บังเนื้อหาตอนเลื่อนไปถึง */
+#contact {
+    scroll-margin-top: 150px; /* ปรับตัวเลขนี้ตามความสูงของ Navbar คุณ */
+}
 
 /* 2. Base Style */
 body {
@@ -17,7 +25,7 @@ body {
     padding-left: 150px;
     padding-right: 100px;
     min-height: 100vh;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .left-element {
@@ -32,7 +40,7 @@ body {
     align-items: center;
     color: white;
     /* ใช้ padding-top แทน transform เพื่อความเสถียรของระยะ */
-    padding-top: 200px; 
+    padding-top: 200px;
 }
 
 /* 4. Left Side Components */
@@ -155,19 +163,19 @@ body {
 /* 7. Dividers & Images */
 #secDivider-P1 {
     /* ความยาวเส้นที่ต้องการ (1049px ตามที่คุณระบุ) */
-    width: 1300px; 
+    width: 1300px;
     height: 5px;
     background-color: white;
-    
+
     /* ใช้ absolute เพื่อกำหนดจุดเริ่มที่แน่นอน */
     position: absolute;
-    
+
     /* เริ่มต้นที่ระยะ 286px จากซ้าย (ซึ่งคือความกว้างของกล่องแดงพอดี เส้นจึงไม่ทับ) */
-    left: 320px; 
-    
+    left: 320px;
+
     /* ปรับระดับความสูงให้ตรงกับดีไซน์เดิม (ลองปรับตัวเลขนี้ให้ตรงกับรอยต่อที่ต้องการ) */
-    top: 950px; 
-    
+    top: 950px;
+
     z-index: 2;
 }
 
@@ -177,36 +185,40 @@ body {
     width: 180px;
     height: auto;
     margin-top: 70px;
-    margin-right: 150px; 
+    margin-right: 150px;
 }
 
 #downArrow {
     width: 61px;
     height: auto;
     /* คำนวณให้กึ่งกลางตัวคน: 150px (margin ขวาคน) + (180px-61px)/2 */
-    margin-right: 180px; 
+    margin-right: 180px;
     margin-top: 10px;
 }
 
-.left-element, .right-element {
+.left-element,
+.right-element {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
 /* #second-part{
     margin-top: 0px;
 } */
-#top-border-box1{
+#top-border-box1 {
     margin-left: 160px;
     background-color: #DF5F30;
     width: 290px;
     height: 20px;
 }
-#top-border-box2{
+
+#top-border-box2 {
     background-color: #363459;
     width: 300px;
     height: 20px;
 }
-#top-border-box3{
+
+#top-border-box3 {
     background-color: #AD3D3D;
     width: 436px;
     height: 20px;
@@ -217,77 +229,182 @@ body {
     flex-direction: column;
     /* justify-content: left; */
     /* 1. เปลี่ยนจาก center เป็น left */
-    text-align: start; 
-    
+    text-align: start;
+
     /* 2. ใส่ margin-left ให้เท่ากับเส้นด้านบน */
-    margin-left: 160px; 
-    
+    margin-left: 160px;
+
     color: white;
     font-size: 128px;
-    line-height: 0.9; /* ปรับให้ตัวอักษรไม่ห่างกันเกินไปแนวตั้ง */
+    line-height: 0.9;
+    /* ปรับให้ตัวอักษรไม่ห่างกันเกินไปแนวตั้ง */
 }
-.left-box2{
+
+.left-box2 {
     margin-left: 100px;
 }
+
 #seperator {
     background-color: white;
-    height: 800px; /* ตรวจสอบว่าความสูงเพียงพอ */
+    height: 800px;
+    /* ตรวจสอบว่าความสูงเพียงพอ */
     width: 3px;
-    display: block; /* มั่นใจว่ามันจะแสดงผลเป็นก้อน */
-    margin: 0 auto; /* จัดให้อยู่กึ่งกลางของ col-1 */
+    display: block;
+    /* มั่นใจว่ามันจะแสดงผลเป็นก้อน */
+    margin: 0 auto;
+    /* จัดให้อยู่กึ่งกลางของ col-1 */
 }
-#P1{
+
+#P1 {
     align-items: center;
     width: 280px;
     height: 280px;
 }
-#NumP1{
+
+#NumP1 {
     font-size: 96px;
 }
-#Detail1{
+
+#Detail1 {
     font-size: 36px;
 }
-#small-D1{
+
+#small-D1 {
     font-size: 30px;
     text-align: end;
     font-weight: lighter;
 }
-#top-border-box4{
-    background-color: #FF9248 ;
+
+#top-border-box4 {
+    background-color: #FF9248;
     width: 360px;
     height: 20px;
 }
-#P2{
+
+#P2 {
     width: 426px;
-    height:321px;
+    height: 321px;
     margin-top: 130px;
 }
-#Detail2{
-font-size: 36px;
-margin-left: 50px;
-margin-top: 60px;
+
+#Detail2 {
+    font-size: 36px;
+    margin-left: 50px;
+    margin-top: 60px;
 }
-#small-D2{
+
+#small-D2 {
     font-size: 30px;
     text-align: end;
     font-weight: lighter;
 }
-#P3{
+
+#P3 {
     width: 344px;
     height: 275px;
 }
-#Detail3{
+
+#Detail3 {
     font-size: 36px;
     margin-left: 20px;
-    
+
 }
-#help{
+
+#help {
     color: #DF5F30;
     font-size: 80px;
+    font-weight: 500;
     text-align: end;
     margin-top: 160px;
+
 }
-#table{
+
+#table {
     width: 136px;
     height: 477px;
+    margin-left: 150px;
+    
+}
+
+#top-border {
+    background-color: white;
+    width: 1600px;
+    height: 3px;
+}
+
+#MinerMan {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    margin-left: auto;
+    display: block;
+    margin-top: 100px;
+}
+/* ไฟล์ CSS */
+/* ในไฟล์ CSS */
+#bot-border {
+    background-color: white;
+    width: 1600px;
+    height: 3px;
+
+    /* --- ลบพวกนี้ทิ้งให้หมดครับ --- */
+    /* position: absolute; */
+    /* top: 493px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    
+    /* --- เพิ่มแค่นี้พอ --- */
+    margin-top: auto; /* สั่งให้มันดันตัวเองไปล่างสุด (เมื่ออยู่ใน Flex column) */
+}
+#Main-conc{
+    color: #DF5F30;
+    font-size: 64px;
+}
+#Side-conc{
+    font-size: 64px;
+    color: white;
+}
+#Sub-concept{
+    color: white;
+    font-size: 36px;
+    font-weight: 200;
+}
+.Contract{
+    text-align: center;
+}
+#short-border{
+    background-color: white;
+    width: 53px;
+    height: 3px;
+}
+/* CSS เพิ่มเติม เพื่อความชัวร์ */
+#Right-Arrow {
+    display: block;
+    width: auto; 
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.Contract{
+    font-size: 48px;
+}
+#Conc{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+#mail {
+    margin-top: 70px;
+    margin-bottom: 67px;
+}
+#coner {
+    width: 100px;
+    height: 300px;
+
+    /* เปิดเส้นขอบเฉพาะ ด้านบน และ ด้านขวา */
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+
+    /* (แนะนำ) ใส่โค้งมนนิดนึงเพื่อให้เข้ากับดีไซน์โค้งๆ ของเว็บ */
+    border-top-right-radius: 20px; 
+    margin-right: 450px;
+    margin-top: -3px;
 }

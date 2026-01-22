@@ -84,7 +84,7 @@ nav a {
     <a href="../index.html" data-text="HOME">HOME</a>
     <a href="/views/prototype.html" data-text="PROTOTYPE">PROTOTYPE</a>
     <a href="team.html" data-text="TEAM">TEAM</a>
-    <a href="../index.html" data-text="CONTACT">CONTACT</a>
+    <a href="../index.html#contact" data-text="CONTACT">CONTACT</a>
 </nav>
     `;
     }
