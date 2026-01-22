@@ -1,37 +1,33 @@
+/* --- Global Styles --- */
 body {
     margin: 0;
     background-color: #2B2B2B;
-    /* */
     font-family: 'SourceSans3', sans-serif;
     color: white;
+    overflow-x: hidden;
 }
 
 .main-element {
     margin-left: 100px;
-    /* */
     margin-right: 100px;
-    /* */
 }
 
-/* แก้ไขส่วนหุ้มโลโก้ */
+/* =========================================
+   PHASE 1: Logo & Hero (คงเดิม)
+   ========================================= */
 #logo-box {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
-    /* เปลี่ยนจาก relative เป็น absolute เพื่อให้มันไม่กินที่เนื้อหาด้านล่าง */
     top: 20px;
-    /* ปรับระยะจากขอบบนให้เท่ากับระดับสายตาของ Navbar */
     left: 100px;
-    /* ให้ตรงกับระยะ margin ของหน้าเว็บ */
     z-index: 100;
-    /* ดันให้สูงกว่า Navbar เพื่อให้โลโก้กดคลิกได้ */
 }
 
 #logo {
     height: 150px;
-    /* ลดขนาดลงเพื่อให้พอดีกับแถบเมนู (ปรับเพิ่ม/ลดได้ตามใจชอบ) */
     width: auto;
     position: relative;
     z-index: 10;
@@ -43,30 +39,25 @@ body {
     background-color: #DF5F30;
     position: absolute;
     top: -40px;
-    /* ขยับกล่องส้มขึ้นตามโลโก้ */
     left: 280px;
-    /* ปรับตำแหน่งให้เหมาะสมกับดีไซน์ใหม่ */
     border-bottom-right-radius: 80px;
     z-index: -1;
-    /* ให้กล่องส้มอยู่หลังสุดจริงๆ */
 }
 
-/* ส่วนเนื้อหา Prototype */
 .hero-section {
     margin-top: 250px;
+    position: relative;
 }
 
 h1 {
     font-size: 64px;
     margin: 0;
-    /* เพิ่ม line-height และ font-weight เพื่อปรับให้ดูหนาน้อยลง */
     line-height: 1.1;
-    font-weight: 1;
+    font-weight: 300;
 }
 
 h1 span {
-    color: #DF5F30;
-    /* เน้นคำว่า Works? */
+    color: #FF9248;
     font-weight: 700;
 }
 
@@ -78,104 +69,294 @@ h1 span {
     line-height: 1.5;
 }
 
-/* การจัดวางภาพคนงานที่มีขอบโค้ง */
-.image-header-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -350px;
-    /* padding-right: 50px;     หรือเพิ่ม padding ขวาเพื่อดันรูปมาทางซ้าย */
-
-}
-
-.image-header {
-    width: 500px;
-    height: auto;
-    border-radius: 80px 0 80px 0;
-    /* โค้งสลับมุมตามรูป */
-    opacity: 0.8;
-    margin-right: 120px;
-    /* ยิ่งตัวเลขมาก รูปจะยิ่งขยับไปทางซ้ายมากขึ้น */
-}
-
-/* --- กล่องสีส้มเล็กด้านขวาของรูปคนงาน --- */
-#box-secondary {
-    width: 80px;         /* ปรับความกว้างให้แคบลงตามดีไซน์ */
-    height: 380px;       /* ปรับความสูงให้ไล่เลี่ยกับความสูงของรูป */
-    background-color: #DF5F30;
-    position: absolute;
-    right: 10px;         /* ตำแหน่งชิดขวา */
-    top: 0px;            /* ตั้งค่าเป็น 0 เพราะเราจะให้มันอิงตาม container ของรูป */
-    border-radius: 0 0 80px 0; /* โค้งเฉพาะมุมขวาล่างตามรูปตัวอย่าง */
-    z-index: 1;
-}
-
-/* ปรับ Container ให้คุมทั้งรูปและกล่องส้มขวา */
 .image-header-container {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    margin-top: -380px;  /* ดึงขึ้นไปขนานกับข้อความ */
-    position: relative;  /* สำคัญ: เพื่อให้กล่องส้มอิงตำแหน่งจากตรงนี้ */
-    gap: 20px;           /* ระยะห่างระหว่างรูปกับกล่องส้มขวา */
+    margin-top: -280px;
+    position: relative;
+    gap: 20px;
 }
 
 .image-header {
-    width: 550px;        /* ปรับขนาดรูปตามความเหมาะสม */
+    width: 550px;
     height: auto;
     border-radius: 80px 0 80px 0;
     opacity: 1;
     position: relative;
-    z-index: 5;          /* ให้รูปอยู่เลเยอร์เดียวกับกล่องหรือทับกันเล็กน้อย */
+    z-index: 5;
 }
 
-/* ขั้นตอน 01 และ 02 */
+#box-secondary {
+    width: 80px;
+    height: 380px;
+    background-color: #DF5F30;
+    position: relative;
+    margin-top: 3px;
+    border-radius: 0 0 80px 0;
+    z-index: 1;
+}
+
+/* =========================================
+   PHASE 2: Step Section & Orange Line
+   ========================================= */
 .step-container {
     margin-top: 100px;
 }
 
+.step-wrapper {
+    position: relative;
+    padding: 100px 0;
+}
+
+.vertical-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* 1. ปรับจุดเริ่มต้นด้านบนให้ตรงกับหัวรูปภาพ Step 01 (-85px ตามระนาบที่คุณตั้งไว้) */
+    top: 25px; 
+    
+    /* 2. เปลี่ยนจาก bottom: 0 เป็นความสูงที่พอดี */
+    /* หากต้องการให้จบที่รูปร่างพอดี ให้ลองปรับตัวเลข height นี้ดูครับ */
+    height: 920px; 
+    
+    /* หรือถ้าอยากให้เส้นยืดหยุ่นตามเนื้อหา สามารถลบ height แล้วใช้ bottom: 500px (เพื่อดันปลายขึ้นมา) */
+    /* bottom: 500px; */
+
+    width: 2px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
 .step-row {
     display: flex;
-    gap: 50px;
-    margin-bottom: 80px;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+    margin-bottom: 180px;
+    position: relative;
 }
 
-.step-content {
+.step-image-box {
     flex: 1;
-}
-
-.step-number {
-    font-size: 80px;
-    font-weight: bold;
-    line-height: 1;
-}
-
-.step-title {
-    font-size: 32px;
-    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: -80px;
 }
 
 .step-image {
-    width: 450px;
-    border-radius: 15px;
-    border: 1px solid #444;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* ส่วน Monitor System (Dashboard) */
+/* --- เฟส 2: เส้นสีส้มยาวระดับเดียวกับเลข 01 (คงเดิม) --- */
+.step-row:first-child .step-image-box::before {
+    content: "";
+    position: absolute;
+    top: -85px;            
+    left: -200px;          
+    width: 600px;          
+    height: 10px;          
+    background-color: #DF5F30;
+    z-index: 3;
+}
+
+/* --- แก้ไขเฟส 2: เพิ่มสี่เหลี่ยมสีส้มบนหัวรูปภาพ Step 02 (image copy 2) --- */
+.step-row:nth-child(2) .step-image-box::before {
+    content: "";
+    position: absolute;
+    /* ปรับตำแหน่ง top ให้อยู่เหนือรูปภาพพอดี */
+    top: -60px;            
+    /* ปรับให้ชิดขอบรูปด้านขวา หรือตำแหน่งที่ต้องการตามภาพ */
+    right: 0;               
+    width: 640px;           /* ความกว้างสี่เหลี่ยมสั้นกว่าของ Step 01 */
+    height: 14px;          
+    background-color: #FF9248;
+    z-index: 3;
+    left: 17px;
+    /* ห้ามแก้ */
+}
+
+/* --- ส่วนของเนื้อหา (คงเดิม) --- */
+.step-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-row:first-child .step-content {
+    margin-top: -85px; 
+}
+
+.step-number {
+    margin-top: -160px;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+    /* ห้ามแก้ไข */
+}
+
+.step-title {
+    font-size: 36px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.step-content p {
+    font-size: 18px;
+    color: #AAAAAA;
+    line-height: 1.4;
+    max-width: 450px;
+}
+
+/* =========================================
+   PHASE 3: Ai CCTV Camera Section (ตามโครงสร้างใหม่)
+   ========================================= */
+.cctv-feature-section {
+    margin-top: 100px;
+    padding-top: 50px;
+    position: relative;
+}
+
+/* แถบส้ม 4 เส้น */
+.orange-bars {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.orange-bars span {
+    width: 180px;
+    height: 10px;
+    background-color: #DF5F30;
+}
+
+.cctv-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.cctv-text {
+    flex: 1;
+}
+
+.cctv-text p {
+    font-size: 18px;
+    color: #AAAAAA;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* วงกลมกราฟิกและกล้อง */
+.cctv-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle-graphic {
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* ขอบวงแหวนขาว */
+}
+
+.inner-orange {
+    border-radius: 50%;
+    background-color: #DF5F30;
+}
+
+/* วงกลมใหญ่ฝั่งขวา */
+.circle-graphic.large {
+    width: 420px;
+    height: 420px;
+}
+
+.circle-graphic.large .inner-orange {
+    width: 340px;
+    height: 340px;
+}
+
+.cctv-img {
+    position: absolute;
+    width: 480px;
+    height: auto;
+    z-index: 10;
+    transform: translate(10px, -10px);
+}
+
+/* กราฟิกวงกลมเล็กและเส้นใต้รายละเอียด */
+.decoration-path {
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+}
+
+.circle-graphic.small {
+    width: 160px;
+    height: 160px;
+    border: 12px solid white;
+    background-color: transparent;
+}
+
+.circle-graphic.small .inner-orange {
+    width: 110px;
+    height: 110px;
+}
+
+.path-line {
+    position: absolute;
+    left: 160px;
+    top: 80px;
+    width: 250px;
+    height: 140px;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-bottom-right-radius: 30px;
+}
+
+/* หัวลูกศร >>> */
+.path-line::after {
+    content: ">>>";
+    position: absolute;
+    bottom: -18px;
+    right: -45px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    transform: rotate(90deg);
+}
+
+/* =========================================
+   PHASE 4: Monitor Section
+   ========================================= */
 .monitor-section {
     display: flex;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
-    margin-top: 120px;
-    padding-bottom: 100px;
+    margin-top: 100px;
+    padding-bottom: 150px;
 }
 
 .dashboard-preview {
-    width: 60%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 65%;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 .orange-text {
     color: #DF5F30;
+    font-weight: 700;
 }

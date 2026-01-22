@@ -1,64 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prototype</title>
     <script src="/components/navbar/navbar.js" defer></script>
-    <!-- <script src="/components/navbar/navbar.js" defer></script> -->
-     <link rel="stylesheet" href="/assets/styles/prototype/prototype.css">
-
+    <link rel="stylesheet" href="/assets/styles/prototype/prototype.css">
 </head>
+
 <body>
-    <main-navbar></main-navbar> 
+    <main-navbar></main-navbar>
 
     <div class="main-element">
-        
+
         <div id="logo-box">
             <div id="box"></div>
             <img src="/assets/images/logo.png" id="logo" alt="Logo">
         </div>
 
         <section class="hero-section">
-    <div class="hero-content">
-        <h1>How Right Site <br><span>Works?</span></h1>
-        <p class="description">
-            AI-powered CCTV cameras monitor workers to detect missing safety equipment 
-            and unsafe proximity to dangerous machinery, ensuring workplace safety.
-        </p>
-    </div>
-
-    <div class="image-header-container">
-        <img src="/assets/images/image.png" class="image-header" alt="Construction Worker">
-        <div id="box-secondary"></div> </div>
-</section>
-
-        <hr style="border: 2px solid #ffffff; margin: 150px 0;">
-
-        <section class="step-container">
-            <div class="step-row">
-                <img src="/assets/images/image copy.png" class="step-image" alt="CCTV Grid"> <div class="step-content">
-                    <div class="step-number">01</div>
-                    <div class="step-title">Capture & Track</div>
-                    <p>Connect Camera and track worker in workshop.</p>
-                </div>
+            <div class="hero-content">
+                <h1>How Right Site <br><span>Works?</span></h1>
+                <p class="description">
+                    AI-powered CCTV cameras monitor workers to detect missing safety equipment
+                    and unsafe proximity to dangerous machinery, ensuring workplace safety.
+                </p>
             </div>
 
-            <div class="step-row">
-                <div class="step-content">
-                    <div class="step-number">02</div>
-                    <div class="step-title">Worker Alert<br>Monitor Notification</div>
-                    <p>AI CCTV helps detect workers without proper PPE and detects unsafe proximity to machines.</p>
+            <div class="image-header-container">
+                <img src="/assets/images/image.png" class="image-header" alt="Construction Worker">
+                <div id="box-secondary"></div>
+            </div>
+        </section>
+
+        <hr style="border: 1px solid rgb(255, 255, 255); margin: 150px 0;">
+
+        <section class="step-container">
+            <div class="step-wrapper">
+                <div class="vertical-line"></div>
+
+                <div class="step-row">
+                    <div class="step-image-box">
+                        <img src="/assets/images/image copy.png" class="step-image" alt="Capture & Track Screens">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">01</div>
+                        <div class="step-title">Capture & Track</div>
+                        <p>Connect Camera and track worker in workplace.</p>
+                    </div>
                 </div>
-                <img src="/assets/images/image copy 2.png" class="step-image" alt="AI Detection"> </div>
+
+                <div class="step-row">
+                    <div class="step-image-box">
+                        <img src="/assets/images/image copy 2.png" class="step-image" alt="Worker Alert Screens">
+                    </div>
+                    <div class="step-content">
+                        <div class="step-number">02</div>
+                        <div class="step-title">Worker Alert Monitor Notification</div>
+                        <p>Ai CCTV camera alerts workers without proper PPE and detects unsafe and sending notifications
+                            to the monitor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cctv-feature-section">
+            <div class="orange-bars">
+                <span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="cctv-flex-container">
+                <div class="cctv-text">
+                    <h2 class="orange-text">Ai CCTV Camera</h2>
+                    <p>The system uses CCTV cameras to detect workers who are not wearing complete safety equipment and
+                        individuals who approach hazardous machinery too closely. When a violation is detected, an alarm
+                        sound is triggered</p>
+
+                    <div class="decoration-path">
+                        <div class="circle-graphic small">
+                            <div class="inner-orange"></div>
+                        </div>
+                        <div class="path-line"></div>
+                    </div>
+                </div>
+
+                <div class="cctv-visual">
+                    <div class="circle-graphic large">
+                        <div class="inner-orange"></div>
+                        <img src="/assets/images/image copy 4.png" class="cctv-img" alt="AI CCTV Camera">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="monitor-section">
-            <img src="/assets/images/image copy 3.png" class="dashboard-preview" alt="AI Dashboard"> <div class="step-content">
+            <img src="/assets/images/image copy 3.png" class="dashboard-preview" alt="AI Dashboard">
+            <div class="step-content">
                 <h2 class="orange-text" style="font-size: 40px;">Monitor System</h2>
                 <p>
-                    The monitoring system displays a visual from CCTV that identifies status: 
-                    missing safety equipment or workers approaching active hazardous machinery. 
+                    The monitoring system displays a visual from CCTV that identifies status:
+                    missing safety equipment or workers approaching active hazardous machinery.
                     It also displays overall surroundings and environmental conditions.
                 </p>
             </div>
@@ -66,4 +108,5 @@
 
     </div>
 </body>
+
 </html>
