@@ -18,7 +18,7 @@ class MyNavbar extends HTMLElement {
         }
         nav {
             background: #2B2B2B;
-            padding: 25px 10px;
+            padding: 25px 100px;
             display: flex;
             justify-content: flex-end;
             position: relative; 
@@ -27,12 +27,12 @@ class MyNavbar extends HTMLElement {
         }
         nav a {
             font-weight: 100;
-            padding-right: 60px;
+            padding-right: 20px;
             color: white;
-            margin-right: 30px;
+            margin-right: 15px;
             text-decoration: none;
             font-family: 'SourceSan3';
-            font-weight:lighter;
+            font-weight: lighter;
             font-size: 24px;
         }
         
