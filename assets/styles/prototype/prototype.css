@@ -216,25 +216,34 @@ h1 span {
 }
 
 /* =========================================
-   PHASE 3: Ai CCTV Camera Section (ตามโครงสร้างใหม่)
+   PHASE 3: Ai CCTV Camera Section (Version แก้ไขลูกศรใหญ่กว้าง 45 องศา)
    ========================================= */
 .cctv-feature-section {
-    margin-top: 100px;
-    padding-top: 50px;
+    margin-top: -250px;
+    padding-top: 30px;
     position: relative;
 }
 
-/* แถบส้ม 4 เส้น */
+/* แถบส้มสลับสีด้านบน */
 .orange-bars {
     display: flex;
-    gap: 15px;
+    gap: 100px;
     margin-bottom: 60px;
 }
 
 .orange-bars span {
-    width: 180px;
-    height: 10px;
-    background-color: #DF5F30;
+    width: 290px;
+    height: 20px;
+}
+
+.orange-bars span:nth-child(1), 
+.orange-bars span:nth-child(3) { 
+    background-color: #DF5F30; 
+}
+
+.orange-bars span:nth-child(2), 
+.orange-bars span:nth-child(4) { 
+    background-color: #FF9248; 
 }
 
 .cctv-flex-container {
@@ -244,18 +253,20 @@ h1 span {
     gap: 50px;
 }
 
-.cctv-text {
-    flex: 1;
+.cctv-text h2.orange-text {
+    color: #FF9248;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
 .cctv-text p {
-    font-size: 18px;
-    color: #AAAAAA;
-    line-height: 1.6;
-    max-width: 500px;
+    font-size: 20px;
+    color: #DDDDDD;
+    line-height: 1.8;
+    max-width: 750px;
 }
 
-/* วงกลมกราฟิกและกล้อง */
+/* --- ส่วน Visual วงกลมใหญ่และกล้อง --- */
 .cctv-visual {
     flex: 1;
     display: flex;
@@ -264,29 +275,35 @@ h1 span {
     position: relative;
 }
 
-.circle-graphic {
+.circle-graphic.large {
     position: relative;
+    width: 430px;
+    height: 430px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white; /* ขอบวงแหวนขาว */
+    background-color: white;
+    left: 100px;
+    top: -20px;
 }
 
-.inner-orange {
-    border-radius: 50%;
-    background-color: #DF5F30;
-}
-
-/* วงกลมใหญ่ฝั่งขวา */
-.circle-graphic.large {
-    width: 420px;
-    height: 420px;
+.circle-graphic.large::after {
+    content: "";
+    position: absolute;
+    right: -150px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 5px;
+    background-color: white;
 }
 
 .circle-graphic.large .inner-orange {
-    width: 340px;
-    height: 340px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background-color: #DF5F30;
 }
 
 .cctv-img {
@@ -294,69 +311,141 @@ h1 span {
     width: 480px;
     height: auto;
     z-index: 10;
-    transform: translate(10px, -10px);
+    left: -225px;
+    top: -75px;
 }
 
-/* กราฟิกวงกลมเล็กและเส้นใต้รายละเอียด */
+/* --- ส่วนตกแต่งด้านล่าง (วงกลมเล็กและการเชื่อมต่อ) --- */
 .decoration-path {
-    margin-top: 80px;
+    margin-top: 50px;
     position: relative;
     display: flex;
 }
 
 .circle-graphic.small {
-    width: 160px;
-    height: 160px;
-    border: 12px solid white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 17px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
+    position: relative;
+    top: 100px;
+    z-index: 2; 
+}
+
+/* เส้นสีขาวฝั่งซ้ายของวงกลมเล็ก (คงเดิม) */
+.circle-graphic.small::before {
+    content: "";
+    position: absolute;
+    left: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 5px;
+    background-color: white;
 }
 
 .circle-graphic.small .inner-orange {
-    width: 110px;
-    height: 110px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #DF5F30;
 }
 
+/* ส่วนเส้นงอ (คงเดิม) */
 .path-line {
     position: absolute;
-    left: 160px;
-    top: 80px;
-    width: 250px;
-    height: 140px;
-    border-bottom: 4px solid white;
-    border-right: 4px solid white;
-    border-bottom-right-radius: 30px;
+    left: 222px;      
+    top: 211px;       
+    width: 500px;   
+    height: 120px;  
+    
+    border-top: 5px solid white; 
+    border-right: 5px solid white;
+    border-top-right-radius: 80px; 
+    
+    z-index: 1;
 }
 
-/* หัวลูกศร >>> */
+/* แก้ไข: เปลี่ยนจากอักษร >>> เป็นการเรียกใช้รูปภาพ image a.png แทน */
 .path-line::after {
-    content: ">>>";
+    content: ""; /* ลบตัวอักษรเดิมออก */
     position: absolute;
-    bottom: -18px;
-    right: -45px;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    transform: rotate(90deg);
-}
+    
+    /* เรียกใช้รูปภาพลูกศรที่ต้องการ */
+    background-image: url('/assets/images/image\ aa.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    /* กำหนดขนาดลูกศรให้บานและใหญ่ตามที่ต้องการ */
+    width: 120px; 
+    height: 120px;
+    
+    /* ปรับตำแหน่งให้กึ่งกลางรูปภาพต่อกับปลายเส้นขาวพอดี */
+    bottom: -80px;  
+    right: -62.5px; /* (ความกว้างรูป 120 / 2) - ครึ่งหนึ่งของความหนาเส้น */
 
+    z-index: 3;
+}
 /* =========================================
-   PHASE 4: Monitor Section
+   PHASE 4: Monitor System (Revised Edition)
    ========================================= */
 .monitor-section {
+    margin-top: 250px; /* เว้นระยะห่างจากเฟส 3 (ปลายลูกศร) */
+    padding: 80px 0;
     display: flex;
-    gap: 60px;
     align-items: center;
-    margin-top: 100px;
-    padding-bottom: 150px;
+    justify-content: space-between;
+    gap: 60px;
 }
 
+/* 1. สี่เหลี่ยมสีส้มบนหัวข้อ */
+.monitor-title {
+    position: relative;
+    padding-top: 35px; /* เว้นที่ให้แถบสีส้มด้านบน */
+    font-size: 40px;
+    color: white; /* คำว่า System จะเป็นสีขาว */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.monitor-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 10px;
+    background-color: #DF5F30; /* สีส้มเข้ม */
+}
+
+/* 2. ไฮไลต์เฉพาะคำว่า Monitor */
+.monitor-title .highlight {
+    color: #FF9248; /* สีส้มสว่าง */
+}
+
+/* 3. จำกัดรายละเอียดเนื้อหา 3 บรรทัด */
+.monitor-section p {
+    font-size: 18px;
+    color: #CCCCCC;
+    line-height: 1.6;
+    max-width: 480px; 
+}
+
+/* 4. ลดขนาดรูปภาพ Dashboard */
 .dashboard-preview {
-    width: 65%;
-    border-radius: 15px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    flex: 0; /* ปิดการขยายตัวแบบ flex */
+    width: 100%;
+    max-width: 650px; /* ปรับลดขนาดความกว้างรูปภาพ (แก้ตัวเลขนี้เพื่อปรับขนาดตามชอบ) */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.orange-text {
-    color: #DF5F30;
-    font-weight: 700;
+.monitor-section .step-content {
+    flex: 1;
 }
