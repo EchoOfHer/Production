@@ -391,23 +391,31 @@ h1 span {
     z-index: 3;
 }
 /* =========================================
-   PHASE 4: Monitor System (Revised Edition)
+   PHASE 4: Monitor System (Full Version)
    ========================================= */
 .monitor-section {
-    margin-top: 250px; /* เว้นระยะห่างจากเฟส 3 (ปลายลูกศร) */
-    padding: 80px 0;
+    margin-top: 250px;
+    padding: 80px 50px;
     display: flex;
+    flex-direction: column; /* ปรับเป็น column เพื่อให้ส่วนล่างต่อท้ายส่วนบน */
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    gap: 100px; /* ระยะห่างระหว่างส่วนบนกับส่วนล่าง */
 }
 
-/* 1. สี่เหลี่ยมสีส้มบนหัวข้อ */
+.monitor-main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+    width: 100%;
+}
+
+/* ส่วนหัวข้อและรายละเอียด (ห้ามแก้ไขตามสั่ง) */
 .monitor-title {
     position: relative;
-    padding-top: 35px; /* เว้นที่ให้แถบสีส้มด้านบน */
+    padding-top: 15px;
     font-size: 40px;
-    color: white; /* คำว่า System จะเป็นสีขาว */
+    color: white; 
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -415,37 +423,77 @@ h1 span {
 .monitor-title::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -100px;
     left: 0;
-    width: 60px;
-    height: 10px;
-    background-color: #DF5F30; /* สีส้มเข้ม */
+    width: 500px;
+    height: 20px;
+    background-color: #FF9248; 
 }
 
-/* 2. ไฮไลต์เฉพาะคำว่า Monitor */
-.monitor-title .highlight {
-    color: #FF9248; /* สีส้มสว่าง */
-}
+.monitor-title .highlight { color: #FF9248; }
 
-/* 3. จำกัดรายละเอียดเนื้อหา 3 บรรทัด */
 .monitor-section p {
     font-size: 18px;
     color: #CCCCCC;
     line-height: 1.6;
-    max-width: 480px; 
+    max-width: 470px; 
 }
 
-/* 4. ลดขนาดรูปภาพ Dashboard */
 .dashboard-preview {
-    flex: 0; /* ปิดการขยายตัวแบบ flex */
+    flex: 0 0 auto;
     width: 100%;
-    max-width: 650px; /* ปรับลดขนาดความกว้างรูปภาพ (แก้ตัวเลขนี้เพื่อปรับขนาดตามชอบ) */
+    max-width: 550px;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.monitor-section .step-content {
-    flex: 1;
+/* -----------------------------------------
+   แก้ไขส่วนล่าง PHASE 4: ดันไปขวาสุดของจอ
+   ----------------------------------------- */
+.monitor-footer-path {
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end; /* ดันกลุ่มรูปภาพไปขวาสุด */
+    margin-top: 80px;
+    padding-right: 0; /* มั่นใจว่าไม่มี padding มากันรูปไว้ */
+}
+
+.horizontal-line-white {
+    flex-grow: 1; 
+    height: 5px;
+    background-color: white;
+    margin-left: -100px; /* ยืดเส้นออกไปทางซ้ายสุดจอ */
+    margin-right: 30px; 
+    margin-top: 120px;
+}
+
+/* กลุ่มรูปภาพที่อยู่ขวาสุด */
+.footer-icons-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; 
+    /* นำกลุ่มรูปไปชิดขวาสุดขอบจอ */
+    margin-right: -100px; /* ใช้ค่าติดลบเพื่อดึงให้รูปไปขนานกับปลายแถบส้มด้านบนถ้าจำเป็น */
+}
+
+.person-icon {
+    width: 150px;
+    height: auto;
+    margin-left: 30px; 
+}
+
+.arrow-path-icon {
+    width: 180px;
+    height: auto;
+    
+    /* ขยับขึ้นด้านบนตามเดิม */
+    transform: translateY(-70px); 
+    
+    /* ปรับระยะห่างระหว่างคนกับลูกศร */
+    margin-left: 50px; 
+    /* ลบ margin-right ทิ้งเพื่อให้ชิดขอบขวาสุดจริง */
+    margin-right: 0; 
 }
