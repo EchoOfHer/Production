@@ -46,7 +46,7 @@ nav a {
     color: white;
     margin-right: 130px;
     font-family: 'Inter';
-    font-weight: 100;
+    font-weight: 300;
     font-size: 24px;
     transition: color 0.3s, font-weight 0.3s;
 }
@@ -83,7 +83,7 @@ nav a {
     </icon>
     <a href="../index.html" data-text="HOME">HOME</a>
     <a href="/views/prototype.html" data-text="PROTOTYPE">PROTOTYPE</a>
-    <a href="team.html" data-text="TEAM">TEAM</a>
+    <a href="/views/member.html" data-text="TEAM">TEAM</a>
     <a href="../index.html#contact" data-text="CONTACT">CONTACT</a>
 </nav>
     `;

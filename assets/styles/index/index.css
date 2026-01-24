@@ -365,6 +365,7 @@ body {
     color: white;
 }
 #Sub-concept{
+    margin-right: 300px;
     color: white;
     font-size: 36px;
     font-weight: 200;
@@ -388,14 +389,17 @@ body {
     font-size: 48px;
 }
 #Conc{
+    margin-right: 300px;
     margin-top: 100px;
     margin-bottom: 20px;
 }
 #mail {
+    margin-right: 300px;
     margin-top: 70px;
     margin-bottom: 67px;
 }
 #coner {
+    
     width: 100px;
     height: 300px;
 

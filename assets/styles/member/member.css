@@ -1,0 +1,264 @@
+    /* เพิ่ม html เข้าไปด้วยเพื่อความชัวร์ */
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2B2B2B;
+
+        /* ★★★ พระเอกของเรา: คำสั่งห้าม Scroll ★★★ */
+        overflow: hidden;
+    }
+
+    /* ภายใน connectedCallback() ส่วนของ <style> */
+
+    nav {
+        /* 1. ใช้ rgba เพื่อให้พื้นหลังโปร่งแสงแต่ตัวหนังสือชัด (0.7 คือความจาง) */
+        /* background: rgba(43, 43, 43, 0.7); */
+
+        padding: 25px 100px;
+        display: flex;
+        align-items: center;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 5;
+    }
+
+    nav a {
+        /* มั่นใจว่า opacity เป็น 1 */
+        opacity: 1 !important;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        margin-right: 130px;
+        font-family: 'Inter';
+
+        font-weight: 300;
+        font-size: 24px;
+        transition: color 0.3s, font-weight 0.3s;
+    }
+
+    /* หัวใจสำคัญ: สร้างพื้นที่สำรองสำหรับตัวหนา */
+    nav a::before {
+        display: block;
+        content: attr(data-text);
+        /* ดึงข้อความจาก data-text มา */
+        font-weight: bold;
+        /* สั่งให้เป็นตัวหนา */
+        height: 0;
+        /* ทำให้ไม่มีความสูง จะได้ไม่ดันบรรทัด */
+        visibility: hidden;
+        /* ซ่อนไว้เพื่อจองพื้นที่ความกว้างเฉยๆ */
+    }
+
+    nav a:hover {
+        font-weight: bold;
+        /* เมื่อ Hover ค่อยเปลี่ยนเป็นตัวหนา */
+        /* color: #FF9248; */
+    }
+
+    nav icon {
+        margin-right: auto;
+        margin-left: 35px;
+        display: flex;
+        /* จัดให้รูปข้างใน icon ตรงกลาง */
+        align-items: center;
+    }
+
+    img {
+        height: 45px;
+        /* ปรับขนาดตามความเหมาะสมของดีไซน์ */
+        width: auto;
+
+    }
+
+
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* ให้กว้างและสูงเต็มจอพอดี */
+        width: 100vw;
+        height: 100vh;
+
+        position: relative;
+        /* กันเหนียว: ถ้าอะไรในนี้ล้น ก็ให้ซ่อนด้วย */
+    }
+
+    #NameBG {
+        font-size: 200px;
+        font-weight: bolder;
+        white-space: nowrap;
+        opacity: 0.5;
+        margin-top: -300px;
+        position: relative;
+        /* ให้เป็น reference point */
+        z-index: 1;
+        /* ให้ชื่ออยู่ด้านหลัง */
+    }
+
+    .fname {
+        color: #DF5F30;
+    }
+
+    .lname {
+        color: rgb(78, 78, 78);
+        margin-left: 10px;
+    }
+
+    #BGImage {
+        position: absolute;
+        /* วางทับแบบ absolute */
+        top: 50%;
+        /* จัดกลางแนวตั้ง */
+        left: 50%;
+        /* จัดกลางแนวนอน */
+        transform: translate(-50%, -50%);
+        /* ปรับให้ตรงกลางพอดี */
+        z-index: 2;
+        /* ให้รูปอยู่ด้านหน้าชื่อ */
+        pointer-events: none;
+        /* ทำให้คลิกผ่านรูปได้ (ถ้าต้องการ) */
+    }
+
+    #BGImage img {
+        width: auto;
+        height: 1100px;
+        display: block;
+        object-fit: cover;
+        object-position: top center;
+        overflow: hidden;
+    }
+
+    .above-all {
+        position: fixed;
+        /* ใช้ fixed เพื่อติดด้านล่างหน้าจอ */
+        bottom: 0;
+        /* ติดด้านล่างสุด */
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        /* ทับรูปภาพ */
+    }
+
+    #member-nav {
+        width: 100%;
+        height: 488px;
+        background: linear-gradient(to top,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 0.95) 20%,
+                rgba(255, 255, 255, 0.85) 30%,
+                rgba(255, 255, 255, 0.7) 50%,
+                rgba(255, 255, 255, 0.5) 60%,
+                rgba(255, 255, 255, 0) 100%);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+
+.member-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 250px; /* เปลี่ยนจาก 20px เป็น 50px หรือมากกว่า */
+    
+    position: fixed;
+    z-index: 15;
+    bottom: 150px;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: fit-content;
+    
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.member-list img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    flex-shrink: 0;
+    filter: grayscale(100%);
+    border: 0px solid transparent; /* เพิ่ม border เริ่มต้นเป็น 0 */
+    padding: 0px; /* เพิ่ม padding เริ่มต้นเป็น 0 */
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); /* ใช้ cubic-bezier สำหรับ bounce effect */
+    cursor: pointer;
+}
+
+.member-list img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    flex-shrink: 0;
+    filter: grayscale(100%);
+    border: 0px solid transparent;
+    padding: 0px;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+}
+
+.member-list img:hover,
+.member-list img.active { /* เพิ่ม class active */
+    filter: grayscale(0%);
+    transform: translateY(-50px);
+    border: 15px solid #DF5F30;
+    padding: 10px;
+}
+.member-list .col {
+    position: relative; /* ให้เป็น reference point */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-list .col h3,
+.member-list .col p {
+    position: absolute; /* ลอยขึ้นมาไม่ดันรูปอื่น */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    margin: 0;
+    text-align: center;
+    color: black;
+    white-space: nowrap;
+    pointer-events: none;
+}
+.member-list .col p{
+    color:#DF5F30;
+    font-weight: 500;
+
+}
+.member-list .col h3 {
+    top: 180px; /* ด้านล่างรูป (175px + 15px) */
+    font-size: 38px;
+    font-weight: bold;
+
+}
+
+.member-list .col p {
+    top: 250px; /* ต่ำกว่า h3 */
+    font-size: 25px;
+
+}
+
+/* แสดงตอน hover หรือ active */
+.member-list .col.active h3,
+.member-list .col.active p {
+    opacity: 1; /* แสดงเฉพาะตอน active */
+}
