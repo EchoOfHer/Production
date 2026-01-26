@@ -2,16 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const membersData = [
         {
             name: "Jirawat Jakthong",
-            role: "Frontend Developer",
+            role: "CTO",
             bgImage: "/assets/member/nobg/NoBGPeach.png" // เพิ่ม path รูปใหญ่
         },
         {
             name: "Dechachai Kumkhong",
-            role: "Backend Developer",
+            role: "Accounting",
             bgImage: "/assets/member/nobg/NoBGDream.png" // เปลี่ยนตามรูปจริง
         },
         {
-            name: "Member 3",
+            name: "Wiwanthanee Pronrod",
             role: "CEO",
             bgImage: "/assets/member/nobg/NoBG3.png"
         },
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             bgImage: "/assets/member/nobg/NoBG4.png"
         },
         {
-            name: "Khanatip Khankingpai",
+            name: "Khanatip Gankingpai",
             role: "Developer",
             bgImage: "/assets/member/nobg/NoBGQ.png"
         }
