@@ -7,16 +7,14 @@ class MyNavbar extends HTMLElement {
         this.innerHTML = `
       <style>
         /* CSS */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
         body {
             margin: 0;
-            background-color: #2B2B2B;
+            background-color: #1d1c1c;
         }
         /* ภายใน connectedCallback() ส่วนของ <style> */
 
 nav {
-    /* 1. ใช้ rgba เพื่อให้พื้นหลังโปร่งแสงแต่ตัวหนังสือชัด (0.7 คือความจาง) */
-    background: rgba(43, 43, 43, 0.7); 
     
     padding: 25px 100px;
     display: flex;
@@ -45,7 +43,7 @@ nav a {
     text-decoration: none;
     color: white;
     margin-right: 130px;
-    font-family: 'Inter';
+    font-family: 'Anton';
     font-weight: 300;
     font-size: 24px;
     transition: color 0.3s, font-weight 0.3s;
@@ -61,8 +59,7 @@ nav a {
         }
 
         nav a:hover {
-            font-weight: bold;         /* เมื่อ Hover ค่อยเปลี่ยนเป็นตัวหนา */
-            color: #FF9248;
+            color: #DF5F30;
         }
         nav icon{
             margin-right: auto; 

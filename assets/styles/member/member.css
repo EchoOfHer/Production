@@ -1,3 +1,5 @@
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+    
     /* เพิ่ม html เข้าไปด้วยเพื่อความชัวร์ */
     html,
     body {
@@ -6,7 +8,7 @@
         width: 100%;
         height: 100%;
         background-color: #2B2B2B;
-
+        font-family: 'Anton';
         /* ★★★ พระเอกของเรา: คำสั่งห้าม Scroll ★★★ */
         overflow: hidden;
     }
@@ -38,9 +40,9 @@
         text-decoration: none;
         color: black;
         margin-right: 130px;
-        font-family: 'Inter';
-
-        font-weight: 300;
+        font-family: 'Anton';
+        
+        /* font-weight: 100; */
         font-size: 24px;
         transition: color 0.3s, font-weight 0.3s;
     }
@@ -59,9 +61,9 @@
     }
 
     nav a:hover {
-        font-weight: bold;
+        /* font-weight: bold; */
         /* เมื่อ Hover ค่อยเปลี่ยนเป็นตัวหนา */
-        /* color: #FF9248; */
+        color: #DF5F30;
     }
 
     nav icon {
@@ -105,6 +107,8 @@
         /* ให้เป็น reference point */
         z-index: 1;
         /* ให้ชื่ออยู่ด้านหลัง */
+        font-family: 'Anton';
+        letter-spacing: 3.5px  ;
     }
 
     .fname {

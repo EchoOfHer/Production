@@ -1,22 +1,18 @@
 /* 1. Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 html {
     scroll-behavior: smooth;
 }
 
-/* เพิ่มส่วนนี้เพื่อแก้ปัญหา Navbar (ที่ Fixed อยู่ข้างบน) บังเนื้อหาตอนเลื่อนไปถึง */
 #contact {
-    scroll-margin-top: 150px; /* ปรับตัวเลขนี้ตามความสูงของ Navbar คุณ */
+    scroll-margin-top: 150px;
 }
 
 /* 2. Base Style */
 body {
     margin: 0;
-    background-color: #2B2B2B;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; /* Default to Inter for body text */
     color: white;
 }
 
@@ -39,7 +35,6 @@ body {
     flex: 1;
     align-items: center;
     color: white;
-    /* ใช้ padding-top แทน transform เพื่อความเสถียรของระยะ */
     padding-top: 200px;
 }
 
@@ -131,30 +126,34 @@ body {
 }
 
 #right-in-blue-box {
-    font-weight: bold;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400; /* Anton only has weight 400 */
     font-size: 40px;
     margin-bottom: 0;
 }
 
 #Subconcept-in-blue-box {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
     margin-top: 5px;
     font-size: 25px;
 }
 
 #Header {
-    font-weight: 800;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400; /* FIXED: Anton only supports 400 */
     font-size: 96px;
-    letter-spacing: 3.5px;
+    letter-spacing: 5px;
     text-align: center;
     line-height: 1.1;
     margin-bottom: 20px;
 }
 
 #Sub-detail {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Inter', sans-serif; /* Use Inter for readable body text */
     margin: 0 150px 0 175px;
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 300; /* Inter supports this weight */
     text-indent: 100px;
     text-align: justify;
     text-justify: inter-word;
@@ -162,24 +161,14 @@ body {
 
 /* 7. Dividers & Images */
 #secDivider-P1 {
-    /* ความยาวเส้นที่ต้องการ (1049px ตามที่คุณระบุ) */
     width: 1300px;
     height: 5px;
     background-color: white;
-
-    /* ใช้ absolute เพื่อกำหนดจุดเริ่มที่แน่นอน */
     position: absolute;
-
-    /* เริ่มต้นที่ระยะ 286px จากซ้าย (ซึ่งคือความกว้างของกล่องแดงพอดี เส้นจึงไม่ทับ) */
     left: 320px;
-
-    /* ปรับระดับความสูงให้ตรงกับดีไซน์เดิม (ลองปรับตัวเลขนี้ให้ตรงกับรอยต่อที่ต้องการ) */
     top: 950px;
-
     z-index: 2;
 }
-
-
 
 #Constructman {
     width: 180px;
@@ -191,7 +180,6 @@ body {
 #downArrow {
     width: 61px;
     height: auto;
-    /* คำนวณให้กึ่งกลางตัวคน: 150px (margin ขวาคน) + (180px-61px)/2 */
     margin-right: 180px;
     margin-top: 10px;
 }
@@ -202,9 +190,6 @@ body {
     padding-right: 0 !important;
 }
 
-/* #second-part{
-    margin-top: 0px;
-} */
 #top-border-box1 {
     margin-left: 160px;
     background-color: #DF5F30;
@@ -225,19 +210,15 @@ body {
 }
 
 .whatHeader {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400; /* FIXED: Anton only supports 400 */
     display: flex;
     flex-direction: column;
-    /* justify-content: left; */
-    /* 1. เปลี่ยนจาก center เป็น left */
     text-align: start;
-
-    /* 2. ใส่ margin-left ให้เท่ากับเส้นด้านบน */
     margin-left: 160px;
-
     color: white;
     font-size: 128px;
     line-height: 0.9;
-    /* ปรับให้ตัวอักษรไม่ห่างกันเกินไปแนวตั้ง */
 }
 
 .left-box2 {
@@ -247,12 +228,9 @@ body {
 #seperator {
     background-color: white;
     height: 800px;
-    /* ตรวจสอบว่าความสูงเพียงพอ */
     width: 3px;
     display: block;
-    /* มั่นใจว่ามันจะแสดงผลเป็นก้อน */
     margin: 0 auto;
-    /* จัดให้อยู่กึ่งกลางของ col-1 */
 }
 
 #P1 {
@@ -262,17 +240,22 @@ body {
 }
 
 #NumP1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     font-size: 96px;
 }
 
 #Detail1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     font-size: 36px;
 }
 
 #small-D1 {
+    font-family: 'Inter', sans-serif;
     font-size: 30px;
     text-align: end;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 #top-border-box4 {
@@ -288,15 +271,18 @@ body {
 }
 
 #Detail2 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     font-size: 36px;
     margin-left: 50px;
     margin-top: 60px;
 }
 
 #small-D2 {
+    font-family: 'Inter', sans-serif;
     font-size: 30px;
     text-align: end;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 #P3 {
@@ -305,25 +291,25 @@ body {
 }
 
 #Detail3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     font-size: 36px;
     margin-left: 20px;
-
 }
 
 #help {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     color: #DF5F30;
     font-size: 80px;
-    font-weight: 500;
     text-align: end;
     margin-top: 160px;
-
 }
 
 #table {
     width: 136px;
     height: 477px;
     margin-left: 150px;
-    
 }
 
 #top-border {
@@ -340,75 +326,75 @@ body {
     display: block;
     margin-top: 100px;
 }
-/* ไฟล์ CSS */
-/* ในไฟล์ CSS */
+
 #bot-border {
     background-color: white;
     width: 1600px;
     height: 3px;
-
-    /* --- ลบพวกนี้ทิ้งให้หมดครับ --- */
-    /* position: absolute; */
-    /* top: 493px; */
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
-    
-    /* --- เพิ่มแค่นี้พอ --- */
-    margin-top: auto; /* สั่งให้มันดันตัวเองไปล่างสุด (เมื่ออยู่ใน Flex column) */
+    margin-top: auto;
 }
-#Main-conc{
+
+#Main-conc {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     color: #DF5F30;
     font-size: 64px;
 }
-#Side-conc{
+
+#Side-conc {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     font-size: 64px;
     color: white;
 }
-#Sub-concept{
+
+#Sub-concept {
+    font-family: 'Inter', sans-serif;
     margin-right: 300px;
     color: white;
     font-size: 36px;
-    font-weight: 200;
+    font-weight: 300;
 }
-.Contract{
+
+.Contract {
     text-align: center;
 }
-#short-border{
+
+#short-border {
     background-color: white;
     width: 53px;
     height: 3px;
 }
-/* CSS เพิ่มเติม เพื่อความชัวร์ */
+
 #Right-Arrow {
     display: block;
-    width: auto; 
+    width: auto;
     margin-top: 0;
     margin-bottom: 0;
 }
-.Contract{
+
+.Contract {
     font-size: 48px;
 }
-#Conc{
+
+#Conc {
     margin-right: 300px;
     margin-top: 100px;
     margin-bottom: 20px;
 }
+
 #mail {
     margin-right: 300px;
     margin-top: 70px;
     margin-bottom: 67px;
 }
+
 #coner {
-    
     width: 100px;
     height: 300px;
-
-    /* เปิดเส้นขอบเฉพาะ ด้านบน และ ด้านขวา */
     border-top: 3px solid white;
     border-right: 3px solid white;
-
-    /* (แนะนำ) ใส่โค้งมนนิดนึงเพื่อให้เข้ากับดีไซน์โค้งๆ ของเว็บ */
-    border-top-right-radius: 20px; 
+    border-top-right-radius: 20px;
     margin-right: 450px;
     margin-top: -3px;
 }

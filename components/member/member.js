@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             name: "Jirawat Jakthong",
             role: "CTO",
-            bgImage: "/assets/member/nobg/NoBGPeach.png" // เพิ่ม path รูปใหญ่
+            bgImage: "/assets/member/nobg/NoBGPeach.png"
         },
         {
             name: "Dechachai Kumkhong",
             role: "Accounting",
-            bgImage: "/assets/member/nobg/NoBGDream.png" // เปลี่ยนตามรูปจริง
+            bgImage: "/assets/member/nobg/NoBGDream.png"
         },
         {
             name: "Wiwanthanee Pronrod",
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const memberCols = document.querySelectorAll('.member-list .col');
-    const bgImage = document.querySelector('#BGImage img'); // เลือกรูปใหญ่
-    const bgName = document.querySelector('#NameBG'); // เลือกชื่อใหญ่
+    const bgImage = document.querySelector('#BGImage img');
+    const bgName = document.querySelector('#NameBG');
     let selectedMemberIndex = null;
     
     memberCols.forEach((col, index) => {
@@ -47,7 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // รีเซ็ตรูปใหญ่กลับไปเป็นรูปเริ่มต้น
                 bgImage.src = "/assets/member/nobg/NoBGQ.png";
-                bgName.innerHTML = '<span class="fname">Khanatip</span><span class="lname">khankingpai</span>';
+                
+                // แสดง "Team Member" เมื่อไม่มีการเลือก
+                bgName.innerHTML = '<span class="fname">Team</span><span class="lname">Member</span>';
             } else {
                 // ปิดทั้งหมด
                 memberCols.forEach(c => {
