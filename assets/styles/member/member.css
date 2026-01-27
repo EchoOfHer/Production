@@ -380,6 +380,7 @@
     }
     
     #BGImage img {
+        
         width: auto;
         height: 700px;
         display: block;
@@ -400,11 +401,13 @@
         overflow-y: visible;
         padding: 60px 20px 0 20px !important;
         box-sizing: border-box;
+        
     }
     .member-list::-webkit-scrollbar { 
         display: none; 
     }
     .member-list img {
+        
         transition: 0.3s;
         width: 107px;
         height: 107px;
@@ -413,9 +416,9 @@
     .member-list img.active {
         /* เพิ่ม class active */
         filter: grayscale(0%);
-        transform: translateY(-50px);
+        transform: translateY(0px);
         border: 10px solid #DF5F30;
-        padding: 10px;
+        padding: 5px;
     }
 
     .member-list .col {
@@ -452,6 +455,7 @@
         color: black;
         font-weight: bold;
         white-space: nowrap;
+        text-align: center;
     }
 
     .member-480 p {
