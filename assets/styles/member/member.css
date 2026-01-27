@@ -33,8 +33,7 @@
         z-index: 5;
     }
 
-    nav a,
-    li a {
+    nav a{
         /* มั่นใจว่า opacity เป็น 1 */
         opacity: 1 !important;
         display: inline-flex;
@@ -90,48 +89,48 @@
     }
 
     #dropdown_menu {
-        transform: translateY(-10px);
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-        pointer-events: none;
-        display: none;
-        /* เอา comment ออก - ซ่อนไว้ก่อน */
-        position: absolute;
-        /* right: 2rem; */
-        top: 70px;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        backdrop-filter: blur(10px);
-        overflow: hidden;
-        z-index: 999;
-        list-style: none;
-        /* เพิ่มบรรทัดนี้ */
-        padding: 0;
-        /* เพิ่มบรรทัดนี้ */
-        margin: 0;
-        /* เพิ่มบรรทัดนี้ */
-    }
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden; /* ใช้แทน display: none */
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); /* ย้ายมาไว้ที่นี่ */
+    pointer-events: none;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    z-index: 999;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    #dropdown_menu.open {
-        display: block;
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-    }
+#dropdown_menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible; /* แสดงเมื่อเปิด */
+    pointer-events: auto;
+}
 
-    #dropdown_menu li {
-        width: 100%;
-        padding: 0.7rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+#dropdown_menu li {
+    width: 100%;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    #dropdown_menu li a {
-        margin-right: 0;
-        /* ลบ margin ที่เกินมา */
-    }
+#dropdown_menu li a {
+    margin-right: 0 !important;
+    font-family: 'Anton' !important;
+    /* font-weight: 100 !important; 100 = lighter */
+    font-size: 18px !important;
+    color: black !important;
+    opacity: 1 !important;
+    text-decoration: none;
+}
 
     
 
