@@ -3,8 +3,18 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+/* Chrome, Safari, Edge */
+html::-webkit-scrollbar {
+    display: none;
 }
 
+/* ยังคงเลื่อนได้แต่ไม่มี scrollbar */
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 #contact {
     scroll-margin-top: 150px;
 }
@@ -398,3 +408,11 @@ body {
     margin-right: 450px;
     margin-top: -3px;
 }
+/* responsive */
+    @media(max-width: 992px){
+        nav a{
+            display: none;
+        }
+    }
+
+    /* end responsive */

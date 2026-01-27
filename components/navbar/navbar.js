@@ -73,6 +73,23 @@ nav a {
             width: auto;
 
         }
+        nav .toggle-nav i{
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            
+
+        }
+        @media(max-width: 1400px){
+            nav a{
+                display: none;
+            }
+            nav .toggle-nav i{
+                display:block;
+                color: white !important;
+            }
+        
+        }
       </style>
 <nav>
     <icon>
@@ -82,7 +99,12 @@ nav a {
     <a href="/views/prototype.html" data-text="PROTOTYPE">PROTOTYPE</a>
     <a href="/views/member.html" data-text="TEAM">TEAM</a>
     <a href="../index.html#contact" data-text="CONTACT">CONTACT</a>
+    <div class="toggle-nav">
+            <i class="fa-solid fa-bars"></i>
+    </div>
 </nav>
+
+
     `;
     }
 }
